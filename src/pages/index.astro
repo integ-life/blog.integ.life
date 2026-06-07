@@ -34,7 +34,7 @@ const latestPosts = posts.filter((post) => !featuredPosts.some((featured) => fea
       <a href="/archive/">{copy.navArchive}</a>
     </div>
     <div class="featured-grid">
-      {featuredPosts.map((post, index) => <PostCard post={post} lang={lang} compact={index > 0} />)}
+      {featuredPosts.map((post) => <PostCard post={post} lang={lang} />)}
     </div>
 
     <div class="section-heading">
