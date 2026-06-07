@@ -90,6 +90,7 @@ const rssPath = lang === 'en' ? '/rss.xml' : '/zh/rss.xml';
           <a href={lang === 'en' ? '/tags/' : '/zh/tags/'}>{copy.navTags}</a>
         </nav>
         <div class="site-actions">
+          <a class="main-site-link" href="https://integ.life">{copy.navMainSite}</a>
           {switchAlt && <a class="language-link" href={switchAlt.path}>{copy.switchLanguage}</a>}
           <button class="theme-toggle" type="button" aria-label={copy.themeToggle} data-theme-toggle>
             <span aria-hidden="true" class="theme-toggle__sun">☼</span>

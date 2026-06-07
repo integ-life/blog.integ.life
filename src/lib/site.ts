@@ -28,6 +28,7 @@ export const COPY: Record<Lang, {
   navArticles: string;
   navArchive: string;
   navTags: string;
+  navMainSite: string;
   latest: string;
   featured: string;
   allArticles: string;
@@ -48,6 +49,7 @@ export const COPY: Record<Lang, {
     navArticles: 'Articles',
     navArchive: 'Archive',
     navTags: 'Tags',
+    navMainSite: 'Main site',
     latest: 'Latest',
     featured: 'Featured',
     allArticles: 'All articles',
@@ -68,6 +70,7 @@ export const COPY: Record<Lang, {
     navArticles: '文章',
     navArchive: '归档',
     navTags: '标签',
+    navMainSite: '主站',
     latest: '最新',
     featured: '精选',
     allArticles: '全部文章',
