@@ -1,0 +1,137 @@
+---
+import type { Lang } from '../lib/site';
+import { getVisual, type VisualKey } from '../lib/visuals';
+
+type Props = {
+  visual: VisualKey;
+  lang: Lang;
+  compact?: boolean;
+  decorative?: boolean;
+};
+
+const { visual, lang, compact = false, decorative = false } = Astro.props;
+const data = getVisual(visual, lang);
+const labels = data.labels;
+const style = `--visual-accent: ${data.accent}; --visual-accent-2: ${data.accent2};`;
+---
+
+<figure
+  class:list={['explainer-visual', `explainer-visual--${data.key}`, { compact }]}
+  style={style}
+  aria-hidden={decorative ? 'true' : undefined}
+  aria-label={decorative ? undefined : data.heroAlt}
+>
+  <div class="visual-orb visual-orb--one"></div>
+  <div class="visual-orb visual-orb--two"></div>
+
+  <div class="visual-top">
+    <span class="visual-pill">{data.eyebrow}</span>
+    <span class="visual-brand">integ.life</span>
+  </div>
+
+  <div class="visual-copy">
+    <h3 class="visual-title" aria-label={data.title.join(' ')}>
+      {data.title.map((line) => <span aria-hidden="true">{line}</span>)}
+    </h3>
+    <p>{data.subtitle}</p>
+  </div>
+
+  {data.key === 'notes' && (
+    <div class="visual-stage visual-stage--notes">
+      <div class="visual-panel panel-notes">
+        <strong>{labels.noteTitle}</strong>
+        <span class="visual-line wide"></span>
+        <span class="visual-line mid"></span>
+        <span class="visual-line short"></span>
+        <div class="visual-mini-tags">
+          <span>{labels.tagOne}</span>
+          <span>{labels.tagTwo}</span>
+        </div>
+      </div>
+      <div class="visual-panel panel-ai">
+        <strong>{labels.aiTitle}</strong>
+        <p>{labels.aiText}</p>
+        <span class="visual-action">{labels.action}</span>
+      </div>
+    </div>
+  )}
+
+  {data.key === 'focus' && (
+    <div class="visual-stage visual-stage--focus">
+      <div class="visual-panel panel-timer">
+        <strong>{labels.timerTitle}</strong>
+        <div class="timer-ring">
+          <span>{labels.timerValue}</span>
+          <small>{labels.timerState}</small>
+        </div>
+      </div>
+      <div class="visual-panel panel-todo">
+        <strong>{labels.todoTitle}</strong>
+        <p><span></span>{labels.todoText}</p>
+        <small>{labels.timelineTitle}</small>
+        <div class="timeline-bars"><i></i><i></i><i></i></div>
+      </div>
+    </div>
+  )}
+
+  {data.key === 'devices' && (
+    <div class="visual-stage visual-stage--devices">
+      <div class="device-web">
+        <strong>{labels.webTitle}</strong>
+        <span></span><span></span><span></span>
+      </div>
+      <div class="device-phone">
+        <strong>{labels.phoneTitle}</strong>
+        <span>25:00</span>
+        <span class="visual-action">{labels.phoneAction}</span>
+      </div>
+      <div class="device-watch">
+        <small>{labels.watchTitle}</small>
+        <strong>{labels.watchState}</strong>
+      </div>
+      <div class="sync-line sync-line--one"></div>
+      <div class="sync-line sync-line--two"></div>
+    </div>
+  )}
+
+  {data.key === 'goals' && (
+    <div class="visual-stage visual-stage--goals">
+      <div class="visual-panel panel-goal">
+        <strong>{labels.goalTitle}</strong>
+        <span class="visual-line wide"></span>
+        <span class="visual-line mid"></span>
+        <small>{labels.milestoneTitle}</small>
+        <div class="milestones">
+          <span></span><b>{labels.milestoneOne}</b>
+          <span></span><b>{labels.milestoneTwo}</b>
+        </div>
+      </div>
+      <div class="visual-panel panel-review">
+        <strong>{labels.reviewTitle}</strong>
+        <div class="score-row">
+          <span>{labels.score}</span>
+          <p><b>{labels.scoreLabel}</b><small>{labels.scoreHint}</small></p>
+        </div>
+        <span class="visual-action">{labels.action}</span>
+      </div>
+    </div>
+  )}
+
+  {data.key === 'backoffice' && (
+    <div class="visual-stage visual-stage--backoffice">
+      <div class="metric-card"><small>{labels.moneyTitle}</small><strong>{labels.moneyValue}</strong></div>
+      <div class="metric-card"><small>{labels.timeTitle}</small><strong>{labels.timeValue}</strong></div>
+      <div class="metric-card"><small>{labels.peopleTitle}</small><strong>{labels.peopleValue}</strong></div>
+      <div class="visual-panel panel-intake">
+        <strong>{labels.intakeTitle}</strong>
+        <p>{labels.intakeText}</p>
+      </div>
+    </div>
+  )}
+
+  <div class="visual-chips">
+    {data.chips.map((chip) => <span>{chip}</span>)}
+  </div>
+
+  <p class="visual-footer">{data.footer}</p>
+</figure>

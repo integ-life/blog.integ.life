@@ -1,5 +1,6 @@
 import type { MarkdownInstance } from 'astro';
 import type { Lang } from './site';
+import { getVisualKeyForTranslation, type VisualKey } from './visuals';
 
 export type PostFrontmatter = {
   title: string;
@@ -18,6 +19,7 @@ export type BlogPost = PostFrontmatter & {
   lang: Lang;
   slug: string;
   url: string;
+  visualKey: VisualKey;
   pubDateValue: Date;
   updatedDateValue?: Date;
   Content: MarkdownInstance<PostFrontmatter>['Content'];
@@ -53,6 +55,7 @@ for (const [path, module] of Object.entries(modules)) {
     lang: parts.lang,
     slug: parts.slug,
     url: parts.lang === 'en' ? `/posts/${parts.slug}/` : `/zh/posts/${parts.slug}/`,
+    visualKey: getVisualKeyForTranslation(frontmatter.translationKey),
     pubDateValue: toDate(frontmatter.pubDate),
     ...(frontmatter.updatedDate ? { updatedDateValue: toDate(frontmatter.updatedDate) } : {}),
     Content: module.Content,
