@@ -71,17 +71,17 @@ const rssPath = lang === 'en' ? '/rss.xml' : '/zh/rss.xml';
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
     <meta name="theme-color" content="#6366f1" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/logo192.png" type="image/png" />
   </head>
   <body>
     <header class="site-header">
       <a class="skip-link" href="#content">Skip to content</a>
       <div class="site-header__inner">
         <a class="brand" href={lang === 'en' ? '/' : '/zh/'} aria-label={SITE.name}>
-          <span class="brand__mark">i</span>
+          <img class="brand__logo" src="/logo192.png" alt="" width="36" height="36" decoding="async" />
           <span>
-            <strong>{SITE.name}</strong>
-            <small>by {SITE.author}</small>
+            <strong>integ.life</strong>
+            <small>{SITE.name}</small>
           </span>
         </a>
         <nav class="site-nav" aria-label="Primary navigation">

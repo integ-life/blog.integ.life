@@ -1,14 +1,15 @@
 ---
-import PostCard from '../../components/PostCard.astro';
+import ExplainerVisual from '../../components/ExplainerVisual.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { COPY, SITE } from '../../lib/site';
-import { getFeaturedPosts, getPosts } from '../../lib/posts';
+import { COPY, SITE, formatDate } from '../../lib/site';
+import { getPosts, getTagGroups } from '../../lib/posts';
 
 const lang = 'zh';
 const copy = COPY[lang];
 const posts = getPosts(lang);
-const featuredPosts = getFeaturedPosts(lang);
-const latestPosts = posts.filter((post) => !featuredPosts.some((featured) => featured.slug === post.slug)).slice(0, 6);
+const leadPost = posts[0];
+const remainingPosts = posts.slice(1);
+const topics = getTagGroups(lang).slice(0, 10);
 ---
 
 <BaseLayout
@@ -18,32 +19,70 @@ const latestPosts = posts.filter((post) => !featuredPosts.some((featured) => fea
   image={SITE.defaultOgImage}
   alternates={[{ lang: 'en', path: '/' }, { lang: 'zh', path: '/zh/' }]}
 >
-  <section class="home-shell">
-    <div class="home-hero">
+  <section class="blog-home">
+    <header class="blog-masthead">
       <div>
         <p class="eyebrow">{copy.homeEyebrow}</p>
         <h1>{copy.homeTitle}</h1>
       </div>
-      <div class="home-hero__note">
-        <p>{copy.homeIntro}</p>
-        <p><strong>{copy.latest}：</strong>{copy.homeSecondary}</p>
+      <p>{copy.homeIntro}</p>
+    </header>
+
+    <div class="blog-index-layout">
+      <div class="blog-feed">
+        <div class="section-heading section-heading--blog">
+          <h2>{copy.latest}</h2>
+          <a href="/zh/archive/">{copy.navArchive}</a>
+        </div>
+
+        {leadPost && (
+          <article class="lead-post">
+            <a class="lead-post__visual" href={leadPost.url} aria-label={leadPost.title}>
+              <ExplainerVisual visual={leadPost.visualKey} lang={lang} decorative />
+            </a>
+            <div class="lead-post__body">
+              <time datetime={leadPost.pubDateValue.toISOString()}>{formatDate(leadPost.pubDateValue, lang)}</time>
+              <h2><a href={leadPost.url}>{leadPost.title}</a></h2>
+              <p>{leadPost.description}</p>
+              <a class="read-link" href={leadPost.url}>{copy.readMore}</a>
+            </div>
+          </article>
+        )}
+
+        <div class="article-list">
+          {remainingPosts.map((post) => (
+            <article class="article-row">
+              <a class="article-row__visual" href={post.url} aria-label={post.title}>
+                <ExplainerVisual visual={post.visualKey} lang={lang} compact decorative />
+              </a>
+              <div class="article-row__body">
+                <time datetime={post.pubDateValue.toISOString()}>{formatDate(post.pubDateValue, lang)}</time>
+                <h2><a href={post.url}>{post.title}</a></h2>
+                <p>{post.description}</p>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
-    </div>
 
-    <div class="section-heading">
-      <h2>{copy.featured}</h2>
-      <a href="/zh/archive/">{copy.navArchive}</a>
-    </div>
-    <div class="featured-grid">
-      {featuredPosts.map((post) => <PostCard post={post} lang={lang} />)}
-    </div>
-
-    <div class="section-heading">
-      <h2>{copy.allArticles}</h2>
-      <a href="/zh/tags/">{copy.navTags}</a>
-    </div>
-    <div class="post-grid">
-      {latestPosts.map((post) => <PostCard post={post} lang={lang} />)}
+      <aside class="blog-sidebar" aria-label="博客信息">
+        <section class="sidebar-block">
+          <h2>{SITE.name}</h2>
+          <p>{copy.homeSecondary}</p>
+        </section>
+        <section class="sidebar-block">
+          <h2>{copy.tagsTitle}</h2>
+          <div class="tag-cloud tag-cloud--sidebar">
+            {topics.map((group) => (
+              <a href={`/zh/tags/${group.slug}/`}>{group.tag} <span>({group.count})</span></a>
+            ))}
+          </div>
+        </section>
+        <section class="sidebar-block">
+          <h2>{copy.rss}</h2>
+          <p><a class="read-link" href="/zh/rss.xml">订阅更新</a></p>
+        </section>
+      </aside>
     </div>
   </section>
 </BaseLayout>
