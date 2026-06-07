@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="en" data-theme="light"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+      (() => {
+        const key = 'blog-theme';
+        const stored = localStorage.getItem(key);
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.dataset.theme = stored || (prefersDark ? 'dark' : 'light');
+      })();
+    </script><title>A personal back office for independent work | Integ Life Blog</title><meta name="description" content="Freelancers and self-directed workers need a lightweight way to connect time, money, follow-ups, ideas, and execution history."><meta name="author" content="Albert"><link rel="canonical" href="https://blog.integ.life/posts/personal-back-office/"><link rel="alternate" type="application/rss+xml" title="Integ Life Blog RSS" href="https://blog.integ.life/rss.xml"><link rel="alternate" hreflang="en" href="https://blog.integ.life/posts/personal-back-office/"><link rel="alternate" hreflang="zh-CN" href="https://blog.integ.life/zh/posts/personal-back-office/"><link rel="alternate" hreflang="x-default" href="https://blog.integ.life/posts/personal-back-office/"><meta property="og:site_name" content="Integ Life Blog"><meta property="og:type" content="article"><meta property="og:title" content="A personal back office for independent work | Integ Life Blog"><meta property="og:description" content="Freelancers and self-directed workers need a lightweight way to connect time, money, follow-ups, ideas, and execution history."><meta property="og:url" content="https://blog.integ.life/posts/personal-back-office/"><meta property="og:image" content="https://blog.integ.life/images/social/05-personal-backoffice.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="A personal back office for independent work | Integ Life Blog"><meta name="twitter:description" content="Freelancers and self-directed workers need a lightweight way to connect time, money, follow-ups, ideas, and execution history."><meta name="twitter:image" content="https://blog.integ.life/images/social/05-personal-backoffice.png"><meta name="theme-color" content="#6366f1"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/_slug_.DJammOMq.css"></head> <body> <header class="site-header"> <a class="skip-link" href="#content">Skip to content</a> <div class="site-header__inner"> <a class="brand" href="/" aria-label="Integ Life Blog"> <span class="brand__mark">i</span> <span> <strong>Integ Life Blog</strong> <small>by Albert</small> </span> </a> <nav class="site-nav" aria-label="Primary navigation"> <a href="/">Articles</a> <a href="/archive/">Archive</a> <a href="/tags/">Tags</a> </nav> <div class="site-actions"> <a class="language-link" href="/zh/posts/personal-back-office/">中文</a> <button class="theme-toggle" type="button" aria-label="Toggle theme" data-theme-toggle> <span aria-hidden="true" class="theme-toggle__sun">☼</span> <span aria-hidden="true" class="theme-toggle__moon">◐</span> </button> </div> </div> </header> <main id="content">  <article class="article-shell"> <header class="article-header"> <div class="article-header__meta"> <time datetime="2026-06-03T00:00:00.000Z">Jun 3, 2026</time> <span>Written by Albert</span> </div> <h1>A personal back office for independent work</h1> <p>Freelancers and self-directed workers need a lightweight way to connect time, money, follow-ups, ideas, and execution history.</p> <div class="article-header__tags" aria-label="Tags"> <a href="/tags/back-office/">back office</a><a href="/tags/time/">time</a><a href="/tags/accounting/">accounting</a> </div> <a class="translation-link" href="/zh/posts/personal-back-office/">中文</a> </header> <img class="article-hero" src="/images/social/05-personal-backoffice.png" alt="integ.life explainer card showing accounting, time tracking, and people follow-ups" width="1080" height="1080" decoding="async"> <div class="prose"> <p>Independent work creates operational overhead.</p>
+<p>Time goes into projects. Money moves in and out. People need follow-ups. Ideas appear between meetings. Small commitments accumulate. When each category lives in a separate tool, the user becomes the integration layer.</p>
+<p>A personal back office is a lightweight system for keeping those records close enough to review together.</p>
+<p>It does not need to be heavy enterprise software. It needs to answer practical questions:</p>
+<ul>
+<li>What did I spend time on?</li>
+<li>What money moved recently?</li>
+<li>Which follow-up is waiting?</li>
+<li>Which idea became a task?</li>
+<li>Which project is consuming attention without visible progress?</li>
+</ul>
+<h2 id="the-homepage-should-be-an-intake-surface">The homepage should be an intake surface</h2>
+<p>The first screen should make it easy to put things into the system before they are perfectly organized. A thought, a transaction, a todo, or a follow-up can be captured quickly and sorted later.</p>
+<p>This keeps the system alive. It respects the way real work arrives.</p>
+<h2 id="one-record-many-views">One record, many views</h2>
+<p>The same underlying record can support different reviews: daily focus, weekly finance, project status, people memory, and long-term goals.</p>
+<p>That is why the personal operating system framing matters. The value is not one feature. The value is the connected record across features.</p> </div> </article> <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"A personal back office for independent work","description":"Freelancers and self-directed workers need a lightweight way to connect time, money, follow-ups, ideas, and execution history.","image":"https://blog.integ.life/images/social/05-personal-backoffice.png","datePublished":"2026-06-03T00:00:00.000Z","dateModified":"2026-06-03T00:00:00.000Z","author":{"@type":"Person","name":"Albert"},"publisher":{"@type":"Organization","name":"Integ Life Blog"},"mainEntityOfPage":"https://blog.integ.life/posts/personal-back-office/"}</script>  </main> <footer class="site-footer"> <div class="site-footer__inner"> <p>Bilingual notes on productivity and personal operating systems.</p> <div> <a href="https://blog.integ.life/rss.xml">RSS</a> <a href="https://integ.life">integ.life</a> </div> </div> </footer> <script>
+      (() => {
+        const key = 'blog-theme';
+        const button = document.querySelector('[data-theme-toggle]');
+        button?.addEventListener('click', () => {
+          const current = document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
+          const next = current === 'dark' ? 'light' : 'dark';
+          document.documentElement.dataset.theme = next;
+          localStorage.setItem(key, next);
+        });
+      })();
+    </script> </body> </html>

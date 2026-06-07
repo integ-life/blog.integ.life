@@ -1,0 +1,36 @@
+<!DOCTYPE html><html lang="en" data-theme="light"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+      (() => {
+        const key = 'blog-theme';
+        const stored = localStorage.getItem(key);
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.dataset.theme = stored || (prefersDark ? 'dark' : 'light');
+      })();
+    </script><title>Goals need evidence, not slogans | Integ Life Blog</title><meta name="description" content="Long-running goals become manageable when milestones, todos, focus sessions, and AI review form a visible execution trail."><meta name="author" content="Albert"><link rel="canonical" href="https://blog.integ.life/posts/goals-need-evidence/"><link rel="alternate" type="application/rss+xml" title="Integ Life Blog RSS" href="https://blog.integ.life/rss.xml"><link rel="alternate" hreflang="en" href="https://blog.integ.life/posts/goals-need-evidence/"><link rel="alternate" hreflang="zh-CN" href="https://blog.integ.life/zh/posts/goals-need-evidence/"><link rel="alternate" hreflang="x-default" href="https://blog.integ.life/posts/goals-need-evidence/"><meta property="og:site_name" content="Integ Life Blog"><meta property="og:type" content="article"><meta property="og:title" content="Goals need evidence, not slogans | Integ Life Blog"><meta property="og:description" content="Long-running goals become manageable when milestones, todos, focus sessions, and AI review form a visible execution trail."><meta property="og:url" content="https://blog.integ.life/posts/goals-need-evidence/"><meta property="og:image" content="https://blog.integ.life/images/social/04-goals-ai-review.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Goals need evidence, not slogans | Integ Life Blog"><meta name="twitter:description" content="Long-running goals become manageable when milestones, todos, focus sessions, and AI review form a visible execution trail."><meta name="twitter:image" content="https://blog.integ.life/images/social/04-goals-ai-review.png"><meta name="theme-color" content="#6366f1"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/_slug_.DJammOMq.css"></head> <body> <header class="site-header"> <a class="skip-link" href="#content">Skip to content</a> <div class="site-header__inner"> <a class="brand" href="/" aria-label="Integ Life Blog"> <span class="brand__mark">i</span> <span> <strong>Integ Life Blog</strong> <small>by Albert</small> </span> </a> <nav class="site-nav" aria-label="Primary navigation"> <a href="/">Articles</a> <a href="/archive/">Archive</a> <a href="/tags/">Tags</a> </nav> <div class="site-actions"> <a class="language-link" href="/zh/posts/goals-need-evidence/">中文</a> <button class="theme-toggle" type="button" aria-label="Toggle theme" data-theme-toggle> <span aria-hidden="true" class="theme-toggle__sun">☼</span> <span aria-hidden="true" class="theme-toggle__moon">◐</span> </button> </div> </div> </header> <main id="content">  <article class="article-shell"> <header class="article-header"> <div class="article-header__meta"> <time datetime="2026-06-04T00:00:00.000Z">Jun 4, 2026</time> <span>Written by Albert</span> </div> <h1>Goals need evidence, not slogans</h1> <p>Long-running goals become manageable when milestones, todos, focus sessions, and AI review form a visible execution trail.</p> <div class="article-header__tags" aria-label="Tags"> <a href="/tags/goals/">goals</a><a href="/tags/review/">review</a><a href="/tags/ai/">AI</a> </div> <a class="translation-link" href="/zh/posts/goals-need-evidence/">中文</a> </header> <img class="article-hero" src="/images/social/04-goals-ai-review.png" alt="integ.life explainer card showing goals, milestones, and AI completion review" width="1080" height="1080" decoding="async"> <div class="prose"> <p>Goals are easy to write and easy to forget.</p>
+<p>The problem is not ambition. The problem is that a goal often stays separate from the daily work that would prove progress. It lives in a planning document while todos, focus sessions, and notes happen somewhere else.</p>
+<p>An execution-focused goal system should connect:</p>
+<ul>
+<li>the goal</li>
+<li>milestones</li>
+<li>nested todos</li>
+<li>focus sessions</li>
+<li>notes and decisions</li>
+<li>completion evidence</li>
+</ul>
+<p>With that structure, review becomes less emotional and more concrete. The question changes from “Do I feel done?” to “What evidence exists?”</p>
+<h2 id="ai-review-should-inspect-the-trail">AI review should inspect the trail</h2>
+<p>AI is most useful when it reviews real context instead of guessing from a vague status update. If the system can see the goal, related todos, completed sessions, and notes, it can help identify gaps.</p>
+<p>It can ask for missing evidence. It can suggest the next milestone. It can warn when completion was marked too early.</p>
+<h2 id="a-good-goal-page-is-a-control-surface">A good goal page is a control surface</h2>
+<p>The goal page should not be a motivational poster. It should be a control surface for the next action. What is blocked? What changed? What needs review? What can be accepted as complete?</p>
+<p>That is how a long-term objective becomes daily behavior.</p> </div> </article> <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Goals need evidence, not slogans","description":"Long-running goals become manageable when milestones, todos, focus sessions, and AI review form a visible execution trail.","image":"https://blog.integ.life/images/social/04-goals-ai-review.png","datePublished":"2026-06-04T00:00:00.000Z","dateModified":"2026-06-04T00:00:00.000Z","author":{"@type":"Person","name":"Albert"},"publisher":{"@type":"Organization","name":"Integ Life Blog"},"mainEntityOfPage":"https://blog.integ.life/posts/goals-need-evidence/"}</script>  </main> <footer class="site-footer"> <div class="site-footer__inner"> <p>Bilingual notes on productivity and personal operating systems.</p> <div> <a href="https://blog.integ.life/rss.xml">RSS</a> <a href="https://integ.life">integ.life</a> </div> </div> </footer> <script>
+      (() => {
+        const key = 'blog-theme';
+        const button = document.querySelector('[data-theme-toggle]');
+        button?.addEventListener('click', () => {
+          const current = document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
+          const next = current === 'dark' ? 'light' : 'dark';
+          document.documentElement.dataset.theme = next;
+          localStorage.setItem(key, next);
+        });
+      })();
+    </script> </body> </html>
