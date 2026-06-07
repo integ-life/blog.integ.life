@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { COPY } from '../../../lib/site';
+import { getTagGroups } from '../../../lib/posts';
+
+const lang = 'zh';
+const copy = COPY[lang];
+const tags = getTagGroups(lang);
+---
+
+<BaseLayout
+  title={copy.tagsTitle}
+  description="按标签浏览 Integ Life Blog 中文文章。"
+  lang={lang}
+  alternates={[{ lang: 'en', path: '/tags/' }, { lang: 'zh', path: '/zh/tags/' }]}
+>
+  <section class="listing-shell">
+    <header class="listing-header">
+      <p class="eyebrow">{copy.homeEyebrow}</p>
+      <h1>{copy.tagsTitle}</h1>
+    </header>
+    <div class="tag-cloud">
+      {tags.map((group) => (
+        <a href={`/zh/tags/${group.slug}/`}>{group.tag} <span>({group.count})</span></a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

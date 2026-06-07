@@ -1,0 +1,48 @@
+---
+import PostCard from '../components/PostCard.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { COPY, SITE } from '../lib/site';
+import { getFeaturedPosts, getPosts } from '../lib/posts';
+
+const lang = 'en';
+const copy = COPY[lang];
+const posts = getPosts(lang);
+const featuredPosts = getFeaturedPosts(lang);
+const latestPosts = posts.filter((post) => !featuredPosts.some((featured) => featured.slug === post.slug)).slice(0, 6);
+---
+
+<BaseLayout
+  title={SITE.defaultTitle}
+  description={SITE.defaultDescription}
+  lang={lang}
+  alternates={[{ lang: 'en', path: '/' }, { lang: 'zh', path: '/zh/' }]}
+>
+  <section class="home-shell">
+    <div class="home-hero">
+      <div>
+        <p class="eyebrow">{copy.homeEyebrow}</p>
+        <h1>{copy.homeTitle}</h1>
+      </div>
+      <div class="home-hero__note">
+        <p>{copy.homeIntro}</p>
+        <p><strong>{copy.latest}:</strong> {copy.homeSecondary}</p>
+      </div>
+    </div>
+
+    <div class="section-heading">
+      <h2>{copy.featured}</h2>
+      <a href="/archive/">{copy.navArchive}</a>
+    </div>
+    <div class="featured-grid">
+      {featuredPosts.map((post, index) => <PostCard post={post} lang={lang} compact={index > 0} />)}
+    </div>
+
+    <div class="section-heading">
+      <h2>{copy.allArticles}</h2>
+      <a href="/tags/">{copy.navTags}</a>
+    </div>
+    <div class="post-grid">
+      {latestPosts.map((post) => <PostCard post={post} lang={lang} />)}
+    </div>
+  </section>
+</BaseLayout>

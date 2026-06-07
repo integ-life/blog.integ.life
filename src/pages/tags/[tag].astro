@@ -1,0 +1,42 @@
+---
+import PostCard from '../../components/PostCard.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { COPY } from '../../lib/site';
+import { getPostsByTag, getTagGroups, type BlogPost } from '../../lib/posts';
+
+type Props = {
+  group: {
+    tag: string;
+    slug: string;
+    posts: BlogPost[];
+  };
+};
+
+export function getStaticPaths() {
+  return getTagGroups('en').map((group) => ({
+    params: { tag: group.slug },
+    props: { group: getPostsByTag('en', group.slug) },
+  }));
+}
+
+const lang = 'en';
+const copy = COPY[lang];
+const { group } = Astro.props as Props;
+---
+
+<BaseLayout
+  title={group.tag}
+  description={`English productivity articles tagged ${group.tag}.`}
+  lang={lang}
+  alternates={[{ lang: 'en', path: `/tags/${group.slug}/` }, { lang: 'zh', path: '/zh/tags/' }]}
+>
+  <section class="listing-shell">
+    <header class="listing-header">
+      <p class="eyebrow">{copy.tagsTitle}</p>
+      <h1>{group.tag}</h1>
+    </header>
+    <div class="post-grid">
+      {group.posts.map((post) => <PostCard post={post} lang={lang} />)}
+    </div>
+  </section>
+</BaseLayout>

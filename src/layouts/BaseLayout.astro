@@ -1,0 +1,129 @@
+---
+import { absoluteUrl, COPY, DEFAULT_LANG, LANGUAGES, SITE, type Lang } from '../lib/site';
+import '../styles/global.css';
+
+type AlternateLink = {
+  lang: Lang;
+  path: string;
+};
+
+type Props = {
+  title?: string;
+  description?: string;
+  lang?: Lang;
+  image?: string;
+  type?: 'website' | 'article';
+  alternates?: AlternateLink[];
+};
+
+const {
+  title = SITE.defaultTitle,
+  description = SITE.defaultDescription,
+  lang = DEFAULT_LANG,
+  image = SITE.defaultOgImage,
+  type = 'website',
+  alternates = [
+    { lang: 'en', path: '/' },
+    { lang: 'zh', path: '/zh/' },
+  ],
+} = Astro.props;
+
+const copy = COPY[lang];
+const pageTitle = title === SITE.defaultTitle ? title : `${title} | ${SITE.name}`;
+const canonical = absoluteUrl(Astro.url.pathname);
+const ogImage = absoluteUrl(image);
+const switchAlt = alternates.find((alternate) => alternate.lang !== lang);
+const rssPath = lang === 'en' ? '/rss.xml' : '/zh/rss.xml';
+---
+
+<!doctype html>
+<html lang={LANGUAGES[lang].locale} data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script is:inline>
+      (() => {
+        const key = 'blog-theme';
+        const stored = localStorage.getItem(key);
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.dataset.theme = stored || (prefersDark ? 'dark' : 'light');
+      })();
+    </script>
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content={SITE.author} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" type="application/rss+xml" title={`${SITE.name} ${copy.rss}`} href={absoluteUrl(rssPath)} />
+    {alternates.map((alternate) => (
+      <link rel="alternate" hreflang={LANGUAGES[alternate.lang].locale} href={absoluteUrl(alternate.path)} />
+    ))}
+    {alternates.find((alternate) => alternate.lang === DEFAULT_LANG) && (
+      <link rel="alternate" hreflang="x-default" href={absoluteUrl(alternates.find((alternate) => alternate.lang === DEFAULT_LANG)?.path ?? '/')} />
+    )}
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="theme-color" content="#6366f1" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="skip-link" href="#content">Skip to content</a>
+      <div class="site-header__inner">
+        <a class="brand" href={lang === 'en' ? '/' : '/zh/'} aria-label={SITE.name}>
+          <span class="brand__mark">i</span>
+          <span>
+            <strong>{SITE.name}</strong>
+            <small>by {SITE.author}</small>
+          </span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href={lang === 'en' ? '/' : '/zh/'}>{copy.navArticles}</a>
+          <a href={lang === 'en' ? '/archive/' : '/zh/archive/'}>{copy.navArchive}</a>
+          <a href={lang === 'en' ? '/tags/' : '/zh/tags/'}>{copy.navTags}</a>
+        </nav>
+        <div class="site-actions">
+          {switchAlt && <a class="language-link" href={switchAlt.path}>{copy.switchLanguage}</a>}
+          <button class="theme-toggle" type="button" aria-label={copy.themeToggle} data-theme-toggle>
+            <span aria-hidden="true" class="theme-toggle__sun">☼</span>
+            <span aria-hidden="true" class="theme-toggle__moon">◐</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="content">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p>{copy.footer}</p>
+        <div>
+          <a href={absoluteUrl(rssPath)}>{copy.rss}</a>
+          <a href="https://integ.life">integ.life</a>
+        </div>
+      </div>
+    </footer>
+
+    <script is:inline>
+      (() => {
+        const key = 'blog-theme';
+        const button = document.querySelector('[data-theme-toggle]');
+        button?.addEventListener('click', () => {
+          const current = document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
+          const next = current === 'dark' ? 'light' : 'dark';
+          document.documentElement.dataset.theme = next;
+          localStorage.setItem(key, next);
+        });
+      })();
+    </script>
+  </body>
+</html>

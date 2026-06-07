@@ -1,0 +1,53 @@
+name: Deploy Blog
+
+on:
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Optional note about this deploy'
+        required: false
+        default: 'manual trigger'
+
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Configure SSH for gh-pages
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: |
+            ${{ secrets.DEPLOY_SSH_KEY }}
+
+      - name: Trust github.com host
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+
+      - name: Configure git author
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Run deploy
+        env:
+          GIT_SSH_COMMAND: "ssh -o StrictHostKeyChecking=yes"
+        run: pnpm run deploy

@@ -1,0 +1,25 @@
+{
+  "name": "blog.integ.life",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.11.0",
+  "scripts": {
+    "dev": "astro dev --host 127.0.0.1 --port 12590",
+    "build": "astro check && astro build",
+    "preview": "astro preview --host 127.0.0.1 --port 12591",
+    "lint": "astro check",
+    "predeploy": "bash scripts/pre-deploy-check.sh && pnpm run build && cp ./CNAME dist/",
+    "deploy": "gh-pages -d dist -b gh-pages -r git@github.com:flyfy1/blog.integ.life.git"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.12",
+    "@astrojs/sitemap": "^3.6.0",
+    "astro": "^5.16.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "gh-pages": "^6.3.0",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { COPY, formatDate } from '../../lib/site';
+import { getPosts } from '../../lib/posts';
+
+const lang = 'zh';
+const copy = COPY[lang];
+const posts = getPosts(lang);
+---
+
+<BaseLayout
+  title={copy.archiveTitle}
+  description="Integ Life Blog 的中文文章归档。"
+  lang={lang}
+  alternates={[{ lang: 'en', path: '/archive/' }, { lang: 'zh', path: '/zh/archive/' }]}
+>
+  <section class="listing-shell">
+    <header class="listing-header">
+      <p class="eyebrow">{copy.homeEyebrow}</p>
+      <h1>{copy.archiveTitle}</h1>
+    </header>
+    <div class="archive-list">
+      {posts.map((post) => (
+        <article class="archive-row">
+          <time datetime={post.pubDateValue.toISOString()}>{formatDate(post.pubDateValue, lang)}</time>
+          <a href={post.url}>{post.title}</a>
+          <span>{post.description}</span>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
