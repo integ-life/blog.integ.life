@@ -2,7 +2,7 @@
 import BaseLayout from './BaseLayout.astro';
 import { absoluteUrl, COPY, formatDate, SITE, type Lang } from '../lib/site';
 import { getTranslation, tagToSlug, type BlogPost } from '../lib/posts';
-import ExplainerVisual from '../components/ExplainerVisual.astro';
+import PostVisual from '../components/PostVisual.astro';
 
 type Props = {
   post: BlogPost;
@@ -60,7 +60,7 @@ const jsonLd = {
       </div>
       {translation && <a class="translation-link" href={translation.url}>{copy.switchLanguage}</a>}
     </header>
-    <ExplainerVisual visual={post.visualKey} lang={lang} />
+    <PostVisual post={post} lang={lang} className="article-hero" />
     <div class="prose">
       <Content />
     </div>

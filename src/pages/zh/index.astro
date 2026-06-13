@@ -1,5 +1,5 @@
 ---
-import ExplainerVisual from '../../components/ExplainerVisual.astro';
+import PostVisual from '../../components/PostVisual.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { COPY, SITE, formatDate } from '../../lib/site';
 import { getPosts, getTagGroups } from '../../lib/posts';
@@ -38,7 +38,7 @@ const topics = getTagGroups(lang).slice(0, 10);
         {leadPost && (
           <article class="lead-post">
             <a class="lead-post__visual" href={leadPost.url} aria-label={leadPost.title}>
-              <ExplainerVisual visual={leadPost.visualKey} lang={lang} decorative />
+              <PostVisual post={leadPost} lang={lang} decorative />
             </a>
             <div class="lead-post__body">
               <time datetime={leadPost.pubDateValue.toISOString()}>{formatDate(leadPost.pubDateValue, lang)}</time>
@@ -53,7 +53,7 @@ const topics = getTagGroups(lang).slice(0, 10);
           {remainingPosts.map((post) => (
             <article class="article-row">
               <a class="article-row__visual" href={post.url} aria-label={post.title}>
-                <ExplainerVisual visual={post.visualKey} lang={lang} compact decorative />
+                <PostVisual post={post} lang={lang} compact decorative />
               </a>
               <div class="article-row__body">
                 <time datetime={post.pubDateValue.toISOString()}>{formatDate(post.pubDateValue, lang)}</time>

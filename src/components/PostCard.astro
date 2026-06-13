@@ -1,7 +1,7 @@
 ---
 import { COPY, formatDate, type Lang } from '../lib/site';
 import { tagToSlug, type BlogPost } from '../lib/posts';
-import ExplainerVisual from './ExplainerVisual.astro';
+import PostVisual from './PostVisual.astro';
 
 type Props = {
   post: BlogPost;
@@ -15,7 +15,7 @@ const copy = COPY[lang];
 
 <article class:list={['post-card', { compact }]}>
   <a class="post-card__image-link" href={post.url} aria-label={post.title}>
-    <ExplainerVisual visual={post.visualKey} lang={lang} compact={compact} decorative />
+    <PostVisual post={post} lang={lang} compact={compact} decorative />
   </a>
   <div class="post-card__body">
     <div class="post-card__meta">

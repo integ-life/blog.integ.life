@@ -10,6 +10,7 @@ export type PostFrontmatter = {
   tags: string[];
   heroImage: string;
   heroAlt: string;
+  visualMode?: 'explainer' | 'hero';
   translationKey: string;
   featured?: boolean;
   draft?: boolean;

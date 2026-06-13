@@ -10,6 +10,7 @@ const posts = defineCollection({
     tags: z.array(z.string()),
     heroImage: z.string(),
     heroAlt: z.string(),
+    visualMode: z.enum(['explainer', 'hero']).optional(),
     translationKey: z.string(),
     featured: z.boolean().optional(),
     draft: z.boolean().optional(),

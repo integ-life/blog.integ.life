@@ -474,6 +474,23 @@ h3 {
   box-shadow: none;
 }
 
+.post-visual-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border: 0;
+  border-radius: inherit;
+  object-fit: cover;
+  object-position: top center;
+  background: var(--surface-muted);
+}
+
+.lead-post__visual .post-visual-image,
+.article-row__visual .post-visual-image,
+.post-visual-image.compact {
+  aspect-ratio: 1;
+}
+
 .explainer-visual {
   position: relative;
   display: grid;
@@ -1119,6 +1136,7 @@ h3 {
 
 .article-header h1 {
   font-size: 2.35rem;
+  text-wrap: balance;
 }
 
 .article-header p {
@@ -1129,7 +1147,7 @@ h3 {
 
 .article-hero {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 16 / 10;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   object-fit: cover;
@@ -1296,7 +1314,7 @@ h3 {
   }
 
   .article-header h1 {
-    font-size: 3.2rem;
+    font-size: 2.75rem;
   }
 
   .site-footer__inner {
