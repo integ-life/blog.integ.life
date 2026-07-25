@@ -26,4 +26,4 @@ pnpm run deploy
 1. `scripts/pre-deploy-check.sh`
 2. `pnpm run build`
 3. copy `CNAME` into `dist/`
-4. push `dist/` to the `gh-pages` branch of `git@github.com:flyfy1/blog.integ.life.git`
+4. push `dist/` to the `gh-pages` branch of `git@github.com:integ-life/blog.integ.life.git`

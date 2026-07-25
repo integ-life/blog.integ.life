@@ -10,7 +10,7 @@
     "preview": "astro preview --host 127.0.0.1 --port 12591",
     "lint": "astro check",
     "predeploy": "bash scripts/pre-deploy-check.sh && pnpm run build && cp ./CNAME dist/",
-    "deploy": "gh-pages -d dist -b gh-pages -r git@github.com:flyfy1/blog.integ.life.git --nojekyll --dotfiles"
+    "deploy": "gh-pages -d dist -b gh-pages -r git@github.com:integ-life/blog.integ.life.git --nojekyll --dotfiles"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.12",
