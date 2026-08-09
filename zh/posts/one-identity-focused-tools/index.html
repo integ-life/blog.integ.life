@@ -1,0 +1,41 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+      (() => {
+        const key = 'blog-theme';
+        const stored = localStorage.getItem(key);
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.dataset.theme = stored || (prefersDark ? 'dark' : 'light');
+      })();
+    </script><title>一个身份，多个聚焦工具 | Integ Life Blog</title><meta name="description" content="Integ.Life 现在让关联产品共享中心登录，同时让每个产品保留清晰用途、独立域名和自己的界面。"><meta name="author" content="Albert"><link rel="canonical" href="https://blog.integ.life/zh/posts/one-identity-focused-tools/"><link rel="alternate" type="application/rss+xml" title="Integ Life Blog RSS" href="https://blog.integ.life/zh/rss.xml"><link rel="alternate" hreflang="zh-CN" href="https://blog.integ.life/zh/posts/one-identity-focused-tools/"><link rel="alternate" hreflang="en" href="https://blog.integ.life/posts/one-identity-focused-tools/"><link rel="alternate" hreflang="x-default" href="https://blog.integ.life/posts/one-identity-focused-tools/"><meta property="og:site_name" content="Integ Life Blog"><meta property="og:type" content="article"><meta property="og:title" content="一个身份，多个聚焦工具 | Integ Life Blog"><meta property="og:description" content="Integ.Life 现在让关联产品共享中心登录，同时让每个产品保留清晰用途、独立域名和自己的界面。"><meta property="og:url" content="https://blog.integ.life/zh/posts/one-identity-focused-tools/"><meta property="og:image" content="https://blog.integ.life/images/social/03-multidevice-offline.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="一个身份，多个聚焦工具 | Integ Life Blog"><meta name="twitter:description" content="Integ.Life 现在让关联产品共享中心登录，同时让每个产品保留清晰用途、独立域名和自己的界面。"><meta name="twitter:image" content="https://blog.integ.life/images/social/03-multidevice-offline.png"><meta name="theme-color" content="#6366f1"><link rel="icon" href="https://integ.life/logo192.png" type="image/png"><script async src="https://www.googletagmanager.com/gtag/js?id=G-PW2W0GXC95"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PW2W0GXC95');
+    </script><link rel="stylesheet" href="/_astro/_slug_.CsHytYF2.css"></head> <body> <header class="site-header"> <a class="skip-link" href="#content">Skip to content</a> <div class="site-header__inner"> <a class="brand" href="/zh/" aria-label="Integ Life Blog"> <img class="brand__logo" src="https://integ.life/logo192.png" alt="" width="36" height="36" decoding="async"> <span> <strong>integ.life</strong> <small>Integ Life Blog</small> </span> </a> <nav class="site-nav" aria-label="Primary navigation"> <a href="/zh/">文章</a> <a href="/zh/archive/">归档</a> <a href="/zh/tags/">标签</a> </nav> <div class="site-actions"> <a class="main-site-link" href="https://integ.life">主站</a> <a class="language-link" href="/posts/one-identity-focused-tools/">English</a> <button class="theme-toggle" type="button" aria-label="切换主题" data-theme-toggle> <span aria-hidden="true" class="theme-toggle__sun">☼</span> <span aria-hidden="true" class="theme-toggle__moon">◐</span> </button> </div> </div> </header> <main id="content">  <article class="article-shell"> <header class="article-header"> <div class="article-header__meta"> <time datetime="2026-08-07T00:00:00.000Z">2026年8月7日</time> <span>Albert 撰写</span> </div> <h1>一个身份，多个聚焦工具</h1> <p>Integ.Life 现在让关联产品共享中心登录，同时让每个产品保留清晰用途、独立域名和自己的界面。</p> <div class="article-header__tags" aria-label="Tags"> <a href="/zh/tags/统一身份/">统一身份</a><a href="/zh/tags/产品设计/">产品设计</a><a href="/zh/tags/工作流/">工作流</a><a href="/zh/tags/integlife/">integ.life</a> </div> <a class="translation-link" href="/posts/one-identity-focused-tools/">English</a> </header> <figure class="explainer-visual explainer-visual--devices" style="--visual-accent: #059669; --visual-accent-2: #06b6d4;" aria-label="可编辑说明图：Web、Android 和 Wear OS 离线优先同步。"> <div class="visual-orb visual-orb--one"></div> <div class="visual-orb visual-orb--two"></div> <div class="visual-top"> <span class="visual-pill">给多设备切换的人</span> <span class="visual-brand">integ.life</span> </div> <div class="visual-copy"> <h3 class="visual-title" aria-label="网页、Mac、手机、手表 都能接上"> <span aria-hidden="true">网页、Mac、手机、手表</span><span aria-hidden="true">都能接上</span> </h3> <p>离线先记录，有网再同步。</p> </div>   <div class="visual-stage visual-stage--devices"> <div class="device-web"> <strong>Web / PWA</strong> <span></span><span></span><span></span> </div> <div class="device-phone"> <strong>Android</strong> <span>25:00</span> <span class="visual-action">开始</span> </div> <div class="device-watch"> <small>Wear OS</small> <strong>同步</strong> </div> <div class="sync-line sync-line--one"></div> <div class="sync-line sync-line--two"></div> </div>   <div class="visual-chips"> <span>Web / PWA</span><span>macOS 菜单栏</span><span>Android + Wear OS</span> </div> <p class="visual-footer">Offline-first sync across everyday devices</p> </figure> <div class="prose"> <p>这是 Integ.Life 近期功能更新系列的第三篇。</p>
+<p>软件产品增长通常有两条路。一条是把所有能力不断塞进同一个应用，直到导航本身变成了产品；另一条是不断创建独立工具，让用户在每个地方重新建立身份和上下文。</p>
+<p>Integ.Life 正在形成第三种结构：一个身份，多个聚焦工具；需要连续性的地方保持连接，其余部分默认独立。</p>
+<h2 id="根域应该解释产品家族">根域应该解释产品家族</h2>
+<p>现在，<code>integ.life</code> 根域是整个产品家族的目录，个人操作系统位于 <code>app.integ.life</code>。语言学习、结构化辩论、中国象棋、游戏和博客等产品，也分别拥有清晰入口。</p>
+<p>这种分离很有意义，因为聚焦活动需要聚焦界面。用第二语言阅读时，不应该像在打开记账模块；研究一盘象棋时，也不应该继承笔记系统的全部导航。</p>
+<h2 id="登录一次同时知道自己在哪里">登录一次，同时知道自己在哪里</h2>
+<p>独立界面不应该意味着重复的身份流程。现在 Integ.Life 的登录会进入统一认证体验，已经接入的应用可以复用同一个身份。</p>
+<p>价值不只是少输几次密码。统一身份保留了“同一个人”的连续性，即使当前要完成的工作已经变化。</p>
+<p>与此同时，域名和界面会明确告诉用户当前所在场景。<code>app.integ.life</code> 是个人系统，<code>blog.integ.life</code> 是公开阅读。每个产品可以清楚解释自己的权限与数据边界，而不是把一切藏进一个巨大的设置页。</p>
+<h2 id="连接不等于合并">连接不等于合并</h2>
+<p>共享账号很容易被误解成“所有数据都应该放在一起”。这反而会破坏聚焦产品的价值。</p>
+<p>更好的默认值是独立。每个产品只请求完成自身工作所需的访问。共享身份回答“用户是谁”，但不会自动回答“所有产品能读取或修改哪些记录”。</p>
+<p>这条边界也让未来集成更诚实。如果两个工具交换上下文，这种关系应该清楚、可理解且有实际价值，而不是因为它们碰巧共用一个数据库。</p>
+<h2 id="产品家族增长后仍然可以理解">产品家族增长后仍然可以理解</h2>
+<p>设计原则很简单：同一个域名家族，一个可以识别的身份，多个用途清晰的工具。</p>
+<p>它比无限增长的侧栏更容易扩展。新产品可以保持足够窄，把一件事做好；用户在不同产品之间移动时，不用不断注册新账号；根目录则负责解释这些产品怎样关联，而不假装它们属于同一个界面。</p>
+<p>系列最后一篇会讨论一个具体连接：只读 ChatGPT Connector 如何在授权范围内读取 Integ.Life 记录，让 AI 参与复盘，但不接管数据。</p> </div> </article> <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"一个身份，多个聚焦工具","description":"Integ.Life 现在让关联产品共享中心登录，同时让每个产品保留清晰用途、独立域名和自己的界面。","image":"https://blog.integ.life/images/social/03-multidevice-offline.png","datePublished":"2026-08-07T00:00:00.000Z","dateModified":"2026-08-07T00:00:00.000Z","author":{"@type":"Person","name":"Albert"},"publisher":{"@type":"Organization","name":"Integ Life Blog"},"mainEntityOfPage":"https://blog.integ.life/zh/posts/one-identity-focused-tools/"}</script>  </main> <footer class="site-footer"> <div class="site-footer__inner"> <p>关于效率和个人操作系统的双语笔记。</p> <div> <a href="https://blog.integ.life/zh/rss.xml">RSS</a> <a href="https://integ.life">integ.life</a> </div> </div> </footer> <script>
+      (() => {
+        const key = 'blog-theme';
+        const button = document.querySelector('[data-theme-toggle]');
+        button?.addEventListener('click', () => {
+          const current = document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
+          const next = current === 'dark' ? 'light' : 'dark';
+          document.documentElement.dataset.theme = next;
+          localStorage.setItem(key, next);
+        });
+      })();
+    </script> </body> </html>

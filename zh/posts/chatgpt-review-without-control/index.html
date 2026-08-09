@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+      (() => {
+        const key = 'blog-theme';
+        const stored = localStorage.getItem(key);
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.dataset.theme = stored || (prefersDark ? 'dark' : 'light');
+      })();
+    </script><title>让 ChatGPT 看记录，但不接管系统 | Integ Life Blog</title><meta name="description" content="Integ.Life ChatGPT Connector 通过只读 MCP 连接提供授权记录，让 AI 获得真实上下文，同时把决定和修改权留给用户。"><meta name="author" content="Albert"><link rel="canonical" href="https://blog.integ.life/zh/posts/chatgpt-review-without-control/"><link rel="alternate" type="application/rss+xml" title="Integ Life Blog RSS" href="https://blog.integ.life/zh/rss.xml"><link rel="alternate" hreflang="zh-CN" href="https://blog.integ.life/zh/posts/chatgpt-review-without-control/"><link rel="alternate" hreflang="en" href="https://blog.integ.life/posts/chatgpt-review-without-control/"><link rel="alternate" hreflang="x-default" href="https://blog.integ.life/posts/chatgpt-review-without-control/"><meta property="og:site_name" content="Integ Life Blog"><meta property="og:type" content="article"><meta property="og:title" content="让 ChatGPT 看记录，但不接管系统 | Integ Life Blog"><meta property="og:description" content="Integ.Life ChatGPT Connector 通过只读 MCP 连接提供授权记录，让 AI 获得真实上下文，同时把决定和修改权留给用户。"><meta property="og:url" content="https://blog.integ.life/zh/posts/chatgpt-review-without-control/"><meta property="og:image" content="https://blog.integ.life/images/posts/day-in-integ-life/chatgpt-connector.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="让 ChatGPT 看记录，但不接管系统 | Integ Life Blog"><meta name="twitter:description" content="Integ.Life ChatGPT Connector 通过只读 MCP 连接提供授权记录，让 AI 获得真实上下文，同时把决定和修改权留给用户。"><meta name="twitter:image" content="https://blog.integ.life/images/posts/day-in-integ-life/chatgpt-connector.png"><meta name="theme-color" content="#6366f1"><link rel="icon" href="https://integ.life/logo192.png" type="image/png"><script async src="https://www.googletagmanager.com/gtag/js?id=G-PW2W0GXC95"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PW2W0GXC95');
+    </script><link rel="stylesheet" href="/_astro/_slug_.CsHytYF2.css"></head> <body> <header class="site-header"> <a class="skip-link" href="#content">Skip to content</a> <div class="site-header__inner"> <a class="brand" href="/zh/" aria-label="Integ Life Blog"> <img class="brand__logo" src="https://integ.life/logo192.png" alt="" width="36" height="36" decoding="async"> <span> <strong>integ.life</strong> <small>Integ Life Blog</small> </span> </a> <nav class="site-nav" aria-label="Primary navigation"> <a href="/zh/">文章</a> <a href="/zh/archive/">归档</a> <a href="/zh/tags/">标签</a> </nav> <div class="site-actions"> <a class="main-site-link" href="https://integ.life">主站</a> <a class="language-link" href="/posts/chatgpt-review-without-control/">English</a> <button class="theme-toggle" type="button" aria-label="切换主题" data-theme-toggle> <span aria-hidden="true" class="theme-toggle__sun">☼</span> <span aria-hidden="true" class="theme-toggle__moon">◐</span> </button> </div> </div> </header> <main id="content">  <article class="article-shell"> <header class="article-header"> <div class="article-header__meta"> <time datetime="2026-08-06T00:00:00.000Z">2026年8月6日</time> <span>Albert 撰写</span> </div> <h1>让 ChatGPT 看记录，但不接管系统</h1> <p>Integ.Life ChatGPT Connector 通过只读 MCP 连接提供授权记录，让 AI 获得真实上下文，同时把决定和修改权留给用户。</p> <div class="article-header__tags" aria-label="Tags"> <a href="/zh/tags/ai/">AI</a><a href="/zh/tags/mcp/">MCP</a><a href="/zh/tags/复盘/">复盘</a><a href="/zh/tags/隐私/">隐私</a> </div> <a class="translation-link" href="/posts/chatgpt-review-without-control/">English</a> </header> <img class="post-visual-image article-hero" src="/images/posts/day-in-integ-life/chatgpt-connector.png" alt="Integ.Life ChatGPT Connector 页面展示 MCP 地址和只读范围" loading="eager" decoding="async"> <div class="prose"> <p>这是 Integ.Life 近期功能更新系列的最后一篇。</p>
+<p>AI 建议常常很泛，原因很简单：AI 看不到问题背后的记录。如果我问“这一周过得怎么样”，却没有提供 Todos、Notes、Goals、专注记录和钱的流动，回答只能基于我临时想起来的故事。</p>
+<p>把全部上下文复制进聊天很麻烦；直接给 AI 广泛修改权限，则是另一种错误。现在的 Integ.Life ChatGPT Connector 尝试了一条更窄的中间路线：通过 MCP 提供经过授权的只读上下文。</p>
+<h2 id="从证据开始复盘">从证据开始复盘</h2>
+<p>连接完成后，ChatGPT 可以读取 Connector 暴露的 Integ.Life 记录，并回答这类问题：</p>
+<ul>
+<li>这一周有哪些重要 Todo 真正推进了？</li>
+<li>哪些目标获得了专注时间，哪些完全没有？</li>
+<li>哪些 open loop 反复出现在笔记和想法里？</li>
+<li>钱和注意力的流向，是否符合我口头上认为重要的事情？</li>
+<li>哪些内容最应该带到明天？</li>
+</ul>
+<p>区别不是模型突然无所不知，而是复盘从结构化记录开始，不再只依赖一段匆忙总结。</p>
+<h2 id="只读是一项产品决定">只读是一项产品决定</h2>
+<p>Connector 的只读边界是有意设计的。ChatGPT 可以读取上下文、比较记录、总结模式、提出更好的后续问题，但不会通过这条连接直接修改个人系统。</p>
+<p>这样，控制回路会保持清晰。AI 可以建议把一条逾期任务拆小，但是否拆分由用户决定；AI 可以发现某个目标最近没有执行证据，但应该调整目标、计划还是优先级，仍然由用户判断。</p>
+<p>对于个人操作系统，这个区别非常重要。这些记录涉及承诺、关系、时间和钱。辅助不应该悄悄变成权力。</p>
+<h2 id="授权边界应该看得见">授权边界应该看得见</h2>
+<p>Connector 使用网页授权，而不是要求用户把私密数据或长期凭证粘贴进对话。设置页面会说明 MCP 地址和可读取范围。</p>
+<p>这形成了一条可以检查的边界：主动连接，理解允许读取的内容，不再需要时可以撤销访问。</p>
+<h2 id="连接以后问题要更具体">连接以后，问题要更具体</h2>
+<p>最有用的 prompt 不是“帮我优化整个人生”，而是边界清楚的复盘问题：</p>
+<ul>
+<li>“比较我原本的计划和实际专注时间去了哪里。”</li>
+<li>“找出反复逾期的 Todo，并建议更小的下一步。”</li>
+<li>“总结本周还没解决的想法，但不要替我创造新任务。”</li>
+<li>“每个结论都先展示证据，再提供建议。”</li>
+</ul>
+<p>这种提问保留了健康分工：Integ.Life 保存长期记录，Connector 提供授权上下文，ChatGPT 帮助解释，而意义和行动仍然由用户负责。</p>
+<p>回看整个系列，同一个原则不断出现：文件夹帮助整理记忆，但不阻碍记录；聚焦视图把任务库存变成当前决定；统一身份连接产品，但不合并一切；MCP 让 AI 获得上下文，但不交出控制权。</p>
+<p>目标不是最大程度自动化，而是在边界清楚的前提下保持连续性。</p> </div> </article> <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"让 ChatGPT 看记录，但不接管系统","description":"Integ.Life ChatGPT Connector 通过只读 MCP 连接提供授权记录，让 AI 获得真实上下文，同时把决定和修改权留给用户。","image":"https://blog.integ.life/images/posts/day-in-integ-life/chatgpt-connector.png","datePublished":"2026-08-06T00:00:00.000Z","dateModified":"2026-08-06T00:00:00.000Z","author":{"@type":"Person","name":"Albert"},"publisher":{"@type":"Organization","name":"Integ Life Blog"},"mainEntityOfPage":"https://blog.integ.life/zh/posts/chatgpt-review-without-control/"}</script>  </main> <footer class="site-footer"> <div class="site-footer__inner"> <p>关于效率和个人操作系统的双语笔记。</p> <div> <a href="https://blog.integ.life/zh/rss.xml">RSS</a> <a href="https://integ.life">integ.life</a> </div> </div> </footer> <script>
+      (() => {
+        const key = 'blog-theme';
+        const button = document.querySelector('[data-theme-toggle]');
+        button?.addEventListener('click', () => {
+          const current = document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
+          const next = current === 'dark' ? 'light' : 'dark';
+          document.documentElement.dataset.theme = next;
+          localStorage.setItem(key, next);
+        });
+      })();
+    </script> </body> </html>
