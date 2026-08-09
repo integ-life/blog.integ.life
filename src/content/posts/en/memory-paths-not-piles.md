@@ -1,13 +1,13 @@
 ---
 title: "Memory should have paths, not piles"
 description: "Integ.Life Memory now combines an Inbox with Markdown file paths and collapsible folders, so notes can gain structure without slowing down capture."
-pubDate: "2026-08-12"
+pubDate: "2026-08-09"
 tags: ["notes", "memory", "workflow", "organization"]
 heroImage: "/images/social/01-notes-ai-system.png"
 heroAlt: "An explainer visual about turning connected notes into an executable system"
 visualMode: "explainer"
 translationKey: "memory-paths-not-piles"
-draft: true
+draft: false
 ---
 
 This is part one of a four-part update on the current Integ.Life workflow.
@@ -48,4 +48,3 @@ Integ.Life started with notes because notes preserve context better than isolate
 The useful sequence is still: capture a fragment, develop it, turn clear next steps into todos, and keep the source material available. Paths simply ensure that, months later, the reasoning can still be found beside the work it belongs to.
 
 Next in the series: how the Todo workspace uses Today, Tomorrow, This week, Overdue, and MIT views to answer a different question—what deserves attention now?
-

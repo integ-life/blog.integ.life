@@ -1,13 +1,13 @@
 ---
 title: "One identity, many focused tools"
 description: "Integ.Life now uses a central sign-in across its connected product family, while each product keeps a focused interface and an independent domain."
-pubDate: "2026-08-18"
+pubDate: "2026-08-07"
 tags: ["identity", "product design", "workflow", "integ.life"]
 heroImage: "/images/social/03-multidevice-offline.png"
 heroAlt: "An explainer visual showing an Integ.Life workflow continuing across surfaces"
 visualMode: "explainer"
 translationKey: "one-identity-focused-tools"
-draft: true
+draft: false
 ---
 
 This is part three of a four-part update on the current Integ.Life workflow.
@@ -45,4 +45,3 @@ The design principle is simple: one domain family, one recognizable identity, se
 That creates a better growth path than an endlessly expanding sidebar. New products can be narrow enough to do one job well. Users can move between them without repeatedly creating accounts. The root directory can show how the pieces relate without pretending they are one interface.
 
 The final article in this series will examine one concrete connection: the read-only ChatGPT Connector, which lets AI review authorized Integ.Life records without taking control of them.
-

@@ -1,13 +1,13 @@
 ---
 title: "Let ChatGPT review the record without taking control"
 description: "The Integ.Life ChatGPT Connector exposes authorized records through a read-only MCP connection, giving AI real context while keeping decisions and changes with the user."
-pubDate: "2026-08-21"
+pubDate: "2026-08-06"
 tags: ["AI", "MCP", "review", "privacy"]
 heroImage: "/images/posts/day-in-integ-life/chatgpt-connector.png"
 heroAlt: "The Integ.Life ChatGPT Connector page showing its MCP endpoint and read scopes"
 visualMode: "hero"
 translationKey: "chatgpt-review-without-control"
-draft: true
+draft: false
 ---
 
 This is the final article in a four-part update on the current Integ.Life workflow.
@@ -56,4 +56,3 @@ These prompts preserve a healthy division of labor. Integ.Life keeps the durable
 Across this series, the same principle keeps appearing: folders organize memory without blocking capture; focused views turn task storage into a decision; shared identity connects products without merging everything; and MCP adds AI context without giving away control.
 
 The goal is not maximum automation. It is continuity with understandable boundaries.
-

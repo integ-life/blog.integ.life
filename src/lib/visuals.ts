@@ -229,6 +229,9 @@ const TRANSLATION_VISUALS: Record<string, VisualKey> = {
   'multi-device-offline-workflow': 'devices',
   'goals-need-evidence': 'goals',
   'personal-back-office': 'backoffice',
+  'memory-paths-not-piles': 'notes',
+  'todo-workspace-what-now': 'focus',
+  'one-identity-focused-tools': 'devices',
 };
 
 export function getVisualKeyForTranslation(translationKey: string): VisualKey {

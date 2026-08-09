@@ -1,13 +1,13 @@
 ---
 title: "记忆库需要路径，而不是堆积"
 description: "Integ.Life 记忆库现在把 Inbox、Markdown 文件路径和可折叠文件夹放在一起，让记录保持顺手，也让重要内容逐渐获得结构。"
-pubDate: "2026-08-12"
+pubDate: "2026-08-09"
 tags: ["笔记", "记忆库", "工作流", "整理"]
 heroImage: "/images/social/01-notes-ai-system.png"
 heroAlt: "把相互连接的笔记逐步变成可执行系统的说明图"
 visualMode: "explainer"
 translationKey: "memory-paths-not-piles"
-draft: true
+draft: false
 ---
 
 这是 Integ.Life 近期功能更新系列的第一篇。
@@ -48,4 +48,3 @@ Integ.Life 从笔记开始，是因为笔记比孤立指令更能保留上下文
 有效的顺序仍然是：先接住碎片，逐步发展内容，把清晰的下一步变成 Todo，同时保留原始材料。路径只是确保几个月以后，我们仍能在对应工作旁边找到当时的判断和理由。
 
 下一篇会进入 Todo 工作台：Today、Tomorrow、This week、Overdue 和 MIT 这些视图，怎样帮助我们回答“现在最该做什么？”
-

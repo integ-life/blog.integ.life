@@ -1,13 +1,13 @@
 ---
 title: "Todo 工作台应该回答：现在做什么？"
 description: "现在的 Integ.Life Todo 工作台把 Today、Tomorrow、This week、Overdue 和 MIT 分开，让大型任务系统仍然能给出清晰的下一步。"
-pubDate: "2026-08-15"
+pubDate: "2026-08-08"
 tags: ["待办", "专注", "计划", "MIT"]
 heroImage: "/images/social/02-focus-pomodoro.png"
 heroAlt: "把专注时间连接到具体 Todo 的说明图"
 visualMode: "explainer"
 translationKey: "todo-workspace-what-now"
-draft: true
+draft: false
 ---
 
 这是 Integ.Life 近期功能更新系列的第二篇。
@@ -49,4 +49,3 @@ Most Important Task 只有在改变行为时才有价值。它不是给多条任
 计划因此变成证据。复盘时不再只问“是否打勾”，还可以问：“被我称为重要的工作，今天真的获得专注时间了吗？”
 
 下一篇会讨论统一账号：为什么 Integ.Life 选择让多个聚焦产品共享身份，而不是把所有能力塞进一个越来越大的应用。
-

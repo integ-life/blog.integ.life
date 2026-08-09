@@ -1,13 +1,13 @@
 ---
 title: "一个身份，多个聚焦工具"
 description: "Integ.Life 现在让关联产品共享中心登录，同时让每个产品保留清晰用途、独立域名和自己的界面。"
-pubDate: "2026-08-18"
+pubDate: "2026-08-07"
 tags: ["统一身份", "产品设计", "工作流", "integ.life"]
 heroImage: "/images/social/03-multidevice-offline.png"
 heroAlt: "Integ.Life 工作流在多个使用场景之间保持连续的说明图"
 visualMode: "explainer"
 translationKey: "one-identity-focused-tools"
-draft: true
+draft: false
 ---
 
 这是 Integ.Life 近期功能更新系列的第三篇。
@@ -45,4 +45,3 @@ Integ.Life 正在形成第三种结构：一个身份，多个聚焦工具；需
 它比无限增长的侧栏更容易扩展。新产品可以保持足够窄，把一件事做好；用户在不同产品之间移动时，不用不断注册新账号；根目录则负责解释这些产品怎样关联，而不假装它们属于同一个界面。
 
 系列最后一篇会讨论一个具体连接：只读 ChatGPT Connector 如何在授权范围内读取 Integ.Life 记录，让 AI 参与复盘，但不接管数据。
-

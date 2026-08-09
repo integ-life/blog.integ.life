@@ -1,13 +1,13 @@
 ---
 title: "A todo workspace should answer: what now?"
 description: "The current Integ.Life Todo workspace separates Today, Tomorrow, This week, Overdue, and MIT so a large task system can still produce a clear next move."
-pubDate: "2026-08-15"
+pubDate: "2026-08-08"
 tags: ["todos", "focus", "planning", "MIT"]
 heroImage: "/images/social/02-focus-pomodoro.png"
 heroAlt: "An explainer visual showing focus time connected to a real todo"
 visualMode: "explainer"
 translationKey: "todo-workspace-what-now"
-draft: true
+draft: false
 ---
 
 This is part two of a four-part update on the current Integ.Life workflow.
@@ -49,4 +49,3 @@ Once selected, the MIT can be paired with a Pomodoro session. The workspace answ
 This is where planning becomes evidence. At review time, the question is no longer only “Did I check it off?” It can also be “Did the work I called important receive focused time?”
 
 Next in the series: why Integ.Life moved to one identity across several focused products, instead of turning every capability into one giant application.
-
