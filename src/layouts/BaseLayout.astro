@@ -72,6 +72,13 @@ const rssPath = lang === 'en' ? '/rss.xml' : '/zh/rss.xml';
     <meta name="twitter:image" content={ogImage} />
     <meta name="theme-color" content="#6366f1" />
     <link rel="icon" href="https://integ.life/logo192.png" type="image/png" />
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-PW2W0GXC95"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PW2W0GXC95');
+    </script>
   </head>
   <body>
     <header class="site-header">
