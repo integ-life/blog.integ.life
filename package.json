@@ -6,6 +6,7 @@
   "packageManager": "pnpm@10.11.0",
   "scripts": {
     "dev": "astro dev --host 127.0.0.1 --port 12590",
+    "prebuild": "node scripts/generate-build-version.mjs integ-life/blog.integ.life blog.integ.life public/build-version.json",
     "build": "astro check && astro build",
     "preview": "astro preview --host 127.0.0.1 --port 12591",
     "lint": "astro check",
