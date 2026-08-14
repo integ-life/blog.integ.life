@@ -283,6 +283,81 @@ h3 {
   font-size: 1.02rem;
 }
 
+.product-directory {
+  scroll-margin-top: 6rem;
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 0 1.75rem;
+}
+
+.product-directory__header {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.product-directory__header h2 {
+  margin-top: 0.25rem;
+  font-size: 1.65rem;
+}
+
+.product-directory__header > p {
+  max-width: 44rem;
+  margin: 0;
+  color: var(--subtle);
+}
+
+.product-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.product-card {
+  display: grid;
+  gap: 0.4rem;
+  min-height: 11.5rem;
+  align-content: start;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  padding: 1rem;
+  transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.product-card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--accent) 48%, var(--border));
+  box-shadow: var(--shadow);
+}
+
+.product-card--current {
+  background: var(--accent-soft);
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+}
+
+.product-card__domain {
+  color: var(--accent-strong);
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+.product-card strong {
+  font-size: 1.04rem;
+}
+
+.product-card p {
+  margin: 0;
+  color: var(--subtle);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.product-card__action {
+  margin-top: auto;
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
 .section-heading {
   display: flex;
   flex-wrap: wrap;
@@ -1256,6 +1331,15 @@ h3 {
 
   .blog-masthead h1 {
     font-size: 2.45rem;
+  }
+
+  .product-directory__header {
+    grid-template-columns: minmax(0, 0.85fr) minmax(18rem, 1fr);
+    align-items: end;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .blog-index-layout {

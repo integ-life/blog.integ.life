@@ -1,7 +1,7 @@
 ---
 import PostVisual from '../../components/PostVisual.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { COPY, SITE, formatDate } from '../../lib/site';
+import { COPY, PRODUCTS, SITE, formatDate } from '../../lib/site';
 import { getPosts, getTagGroups } from '../../lib/posts';
 
 const lang = 'zh';
@@ -13,8 +13,8 @@ const topics = getTagGroups(lang).slice(0, 10);
 ---
 
 <BaseLayout
-  title="Integ Life Blog"
-  description="关于效率、个人系统、专注工作和 AI 辅助执行的双语笔记。"
+  title={SITE.defaultTitle}
+  description="来自整个 Integ.Life 聚焦 App 产品家族的双语产品故事、实践笔记与实验。"
   lang={lang}
   image={SITE.defaultOgImage}
   alternates={[{ lang: 'en', path: '/' }, { lang: 'zh', path: '/zh/' }]}
@@ -27,6 +27,29 @@ const topics = getTagGroups(lang).slice(0, 10);
       </div>
       <p>{copy.homeIntro}</p>
     </header>
+
+    <section class="product-directory" id="products" aria-labelledby="products-title">
+      <header class="product-directory__header">
+        <div>
+          <p class="eyebrow">{copy.productsEyebrow}</p>
+          <h2 id="products-title">{copy.productsTitle}</h2>
+        </div>
+        <p>{copy.productsIntro}</p>
+      </header>
+      <div class="product-grid">
+        {PRODUCTS.map((product) => {
+          const isCurrent = product.domain === 'blog.integ.life';
+          return (
+            <a class:list={['product-card', { 'product-card--current': isCurrent }]} href={isCurrent ? '/zh/' : product.url} aria-current={isCurrent ? 'page' : undefined}>
+              <span class="product-card__domain">{product.domain}</span>
+              <strong>{product.name}</strong>
+              <p>{product.description.zh}</p>
+              <span class="product-card__action">{isCurrent ? copy.productCurrent : <>{copy.productOpen} <span aria-hidden="true">↗</span></>}</span>
+            </a>
+          );
+        })}
+      </div>
+    </section>
 
     <div class="blog-index-layout">
       <div class="blog-feed">

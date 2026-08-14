@@ -1,6 +1,6 @@
 # blog.integ.life
 
-Static bilingual productivity blog for `blog.integ.life`, built with Astro and deployed to GitHub Pages.
+Static bilingual product journal for the full Integ.Life app family, built with Astro and deployed to GitHub Pages.
 
 ## Commands
 

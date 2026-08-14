@@ -92,6 +92,7 @@ const rssPath = lang === 'en' ? '/rss.xml' : '/zh/rss.xml';
           </span>
         </a>
         <nav class="site-nav" aria-label="Primary navigation">
+          <a href={lang === 'en' ? '/#products' : '/zh/#products'}>{copy.navProducts}</a>
           <a href={lang === 'en' ? '/' : '/zh/'}>{copy.navArticles}</a>
           <a href={lang === 'en' ? '/archive/' : '/zh/archive/'}>{copy.navArchive}</a>
           <a href={lang === 'en' ? '/tags/' : '/zh/tags/'}>{copy.navTags}</a>
