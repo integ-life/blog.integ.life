@@ -86,7 +86,7 @@ const rssPath = lang === 'en' ? '/rss.xml' : '/zh/rss.xml';
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
     <integ-family-bar product="blog" name="Field Notes" locale={lang} home-href={lang === 'en' ? '/' : '/zh/'}>
-      <div data-il-actions>{switchAlt && <a class="il-control" href={switchAlt.path}>{copy.switchLanguage}</a>}</div>
+      <div data-il-actions>{switchAlt && <a data-il-compact="language" class="il-control" href={switchAlt.path} title={copy.switchLanguage}>{copy.switchLanguage}</a>}</div>
     </integ-family-bar>
     <nav class="site-nav shared-editorial-nav" aria-label="Primary navigation">
       <a href={lang === 'en' ? '/#products' : '/zh/#products'}>{copy.navProducts}</a>
