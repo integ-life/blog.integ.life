@@ -14,6 +14,9 @@ importers:
       '@astrojs/sitemap':
         specifier: ^3.6.0
         version: 3.7.3
+      '@integ-life/ui':
+        specifier: file:vendor/integ-life-ui-0.2.0.tgz
+        version: file:vendor/integ-life-ui-0.2.0.tgz(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       astro:
         specifier: ^5.16.0
         version: 5.18.2(@types/node@24.13.1)(rollup@4.61.1)(typescript@5.9.3)(yaml@2.9.0)
@@ -567,6 +570,18 @@ packages:
     engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
     cpu: [x64]
     os: [win32]
+
+  '@integ-life/ui@file:vendor/integ-life-ui-0.2.0.tgz':
+    resolution: {integrity: sha512-3k5IUcdzTm74BSPGz6jDgOIfU97tpCeKr75o9YBNs91h5gQr1VvalkUEZhK9umbk3XBInjFkunw+Dtu7Bs5ahA==, tarball: file:vendor/integ-life-ui-0.2.0.tgz}
+    version: 0.2.0
+    peerDependencies:
+      react: '>=18'
+      react-dom: '>=18'
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-dom:
+        optional: true
 
   '@jridgewell/sourcemap-codec@1.5.5':
     resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
@@ -1614,6 +1629,15 @@ packages:
   radix3@1.1.2:
     resolution: {integrity: sha512-b484I/7b8rDEdSDKckSSBA8knMpcdsXudlE/LNL639wFoHKwLbEkQFZHWEYwDC0wa0FKUcCY+GAF73Z7wxNVFA==}
 
+  react-dom@19.3.0:
+    resolution: {integrity: sha512-JDk8dgif51OjFoDE70+OT9ICyYr+69HlmihNwp1+Nsfbna3t5sIiCa9ZJktDmQ4/1b/rn26hIAR2uYXDMr5r0Q==}
+    peerDependencies:
+      react: ^19.3.0
+
+  react@19.3.0:
+    resolution: {integrity: sha512-E8LUcbtBWt20bbl2YoHfx4ZDBdxVTfOKtCZn9cDSJ4l6/nuoApcpIBcj47t2wZoVX8g2ZHuMHbiShgCR1T5Sog==}
+    engines: {node: '>=0.10.0'}
+
   readdirp@4.1.2:
     resolution: {integrity: sha512-GDhwkLfywWL2s6vEjyhri+eXmfH6j1L7JE27WhqLeYzoh/A3DBaYGEj2H/HFZCn/kMfim73FXxEJTw06WtxQwg==}
     engines: {node: '>= 14.18.0'}
@@ -1700,6 +1724,9 @@ packages:
   sax@1.6.0:
     resolution: {integrity: sha512-6R3J5M4AcbtLUdZmRv2SygeVaM7IhrLXu9BmnOGmmACak8fiUtOsYNWUS4uK7upbmHIBbLBeFeI//477BKLBzA==}
     engines: {node: '>=11.0.0'}
+
+  scheduler@0.28.0:
+    resolution: {integrity: sha512-juorfCmIkIw8tT+p5BXSm6PJjQF/ycEYmKyzURCIt/RaZIhL+PulbQ9Yu2z1HdOJDdqDTlxA1+xKBmHXJsczAw==}
 
   semver@6.3.1:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
@@ -2578,6 +2605,11 @@ snapshots:
 
   '@img/sharp-win32-x64@0.34.5':
     optional: true
+
+  '@integ-life/ui@file:vendor/integ-life-ui-0.2.0.tgz(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+    optionalDependencies:
+      react: 19.3.0
+      react-dom: 19.3.0(react@19.3.0)
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
 
@@ -3914,6 +3946,15 @@ snapshots:
 
   radix3@1.1.2: {}
 
+  react-dom@19.3.0(react@19.3.0):
+    dependencies:
+      react: 19.3.0
+      scheduler: 0.28.0
+    optional: true
+
+  react@19.3.0:
+    optional: true
+
   readdirp@4.1.2: {}
 
   readdirp@5.0.0: {}
@@ -4065,6 +4106,9 @@ snapshots:
       queue-microtask: 1.2.3
 
   sax@1.6.0: {}
+
+  scheduler@0.28.0:
+    optional: true
 
   semver@6.3.1: {}
 
