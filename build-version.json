@@ -2,8 +2,9 @@
   "schema": "integ.life/build-version/v1",
   "repository": "integ-life/blog.integ.life",
   "service": "blog.integ.life",
-  "version": "git-b6cb8969a234",
-  "commit": "b6cb8969a234a85b6ff8ec4378927c2471a83d58",
-  "builtAt": "2026-08-14T14:57:09.745Z",
-  "dirty": false
+  "version": "git-8a520882958f",
+  "commit": "8a520882958ff1899fd01afab0bf6d56272532ca",
+  "builtAt": "2026-10-11T06:48:44.877Z",
+  "dirty": false,
+  "uiVersion": "0.2.0"
 }
