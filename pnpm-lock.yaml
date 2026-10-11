@@ -15,8 +15,8 @@ importers:
         specifier: ^3.6.0
         version: 3.7.3
       '@integ-life/ui':
-        specifier: file:vendor/integ-life-ui-0.3.0.tgz
-        version: file:vendor/integ-life-ui-0.3.0.tgz(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+        specifier: file:vendor/integ-life-ui-0.4.0.tgz
+        version: file:vendor/integ-life-ui-0.4.0.tgz(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       astro:
         specifier: ^5.16.0
         version: 5.18.2(@types/node@24.13.1)(rollup@4.61.1)(typescript@5.9.3)(yaml@2.9.0)
@@ -571,9 +571,9 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@integ-life/ui@file:vendor/integ-life-ui-0.3.0.tgz':
-    resolution: {integrity: sha512-nUM7GnGX5aoPhdk4phT7LWuAj7GrHdBjC7ta5CrahsLP2o+ILFmHkxzKbpE+gThf/W1mDN+dnRexCen5LcDBKQ==, tarball: file:vendor/integ-life-ui-0.3.0.tgz}
-    version: 0.3.0
+  '@integ-life/ui@file:vendor/integ-life-ui-0.4.0.tgz':
+    resolution: {integrity: sha512-cxApVyj9SycQxgUn5mwnZhjt3FSAgh2pNHGO1FPZZrjP3agrsJW66GrYCuK9XE4Ok6NzfN6gLoT7x4eN84vUKw==, tarball: file:vendor/integ-life-ui-0.4.0.tgz}
+    version: 0.4.0
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
@@ -2606,7 +2606,7 @@ snapshots:
   '@img/sharp-win32-x64@0.34.5':
     optional: true
 
-  '@integ-life/ui@file:vendor/integ-life-ui-0.3.0.tgz(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+  '@integ-life/ui@file:vendor/integ-life-ui-0.4.0.tgz(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
     optionalDependencies:
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
