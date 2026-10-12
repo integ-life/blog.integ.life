@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://blog.integ.life/sitemap-index.xml
+Sitemap: https://blog.integ.life/sitemap.xml
