@@ -1,5 +1,5 @@
 ---
-import { absoluteUrl, COPY, DEFAULT_LANG, LANGUAGES, SITE, type Lang } from '../lib/site';
+import { absoluteUrl, COPY, DEFAULT_LANG, LANGUAGES, PRODUCTS, SITE, type Lang } from '../lib/site';
 import '../styles/global.css';
 import '@integ-life/ui/styles.css';
 import '../styles/shared-layout.css';
@@ -93,6 +93,12 @@ const rssPath = lang === 'en' ? '/rss.xml' : '/zh/rss.xml';
       <a href={lang === 'en' ? '/' : '/zh/'}>{copy.navArticles}</a>
       <a href={lang === 'en' ? '/archive/' : '/zh/archive/'}>{copy.navArchive}</a>
       <a href={lang === 'en' ? '/tags/' : '/zh/tags/'}>{copy.navTags}</a>
+      <details class="family-product-links">
+        <summary>{lang === 'en' ? 'All apps' : '全部产品'}</summary>
+        <nav aria-label={lang === 'en' ? 'Integ.Life products' : 'Integ.Life 产品'}>
+          {PRODUCTS.map(product => <a href={product.url}>{product.name}</a>)}
+        </nav>
+      </details>
     </nav>
     <script>import '@integ-life/ui/static';</script>
 

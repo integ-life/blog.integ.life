@@ -58,6 +58,22 @@ export const PRODUCTS = [
     },
   },
   {
+    domain: 'chess.integ.life', name: 'Chess', url: 'https://chess.integ.life',
+    description: { en: 'Learn and play chess with courses, Stockfish, analysis and synced games.', zh: '通过课程、Stockfish、分析与同步棋谱学习并对弈国际象棋。' },
+  },
+  {
+    domain: 'games.integ.life', name: 'Integ Games', url: 'https://games.integ.life',
+    description: { en: 'Twenty original browser games with touch controls and local saves.', zh: '二十个原创浏览器游戏，支持触控与本机存档。' },
+  },
+  {
+    domain: 'tools.integ.life', name: 'Integ Tools', url: 'https://tools.integ.life',
+    description: { en: '65 browser utilities and calculators in seven interface languages.', zh: '65 个浏览器工具与计算器，支持七种界面语言。' },
+  },
+  {
+    domain: 'integ.life/investment', name: 'Investment', url: 'https://integ.life/investment/',
+    description: { en: 'Options strategy research, model backtests and transparent cash-flow ledgers.', zh: '期权策略研究、模型回测与透明的现金流账本。' },
+  },
+  {
     domain: 'blog.integ.life',
     name: 'Field Notes',
     url: 'https://blog.integ.life',
