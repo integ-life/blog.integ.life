@@ -1,11 +1,11 @@
 /* Editorial content retains its reading width and local navigation. */
 :root,:root[data-integ-theme="dark"] { --bg:var(--il-bg); --surface:var(--il-surface); --surface-muted:var(--il-subtle); --text:var(--il-text); --subtle:var(--il-muted); --border:var(--il-border); --accent:var(--il-accent); --accent-strong:var(--il-accent); --accent-soft:var(--il-subtle); --accent-text:var(--il-accent); }
-.shared-editorial-nav { display:flex; flex-wrap:wrap; justify-content:flex-start; gap:24px; padding:12px 24px; border-bottom:1px solid var(--il-border); background:var(--il-surface); }
+.shared-editorial-nav { position:relative; display:flex; flex-wrap:wrap; justify-content:flex-start; gap:24px; padding:12px 24px; border-bottom:1px solid var(--il-border); background:var(--il-surface); }
 .shared-editorial-nav a { min-height:36px; display:inline-flex; align-items:center; }
 .il-family-bar { line-height:1.4; }
 .il-dialog { line-height:1.5; }
 
-.family-product-links { position:relative; align-self:center; }
+.family-product-links { position:static; align-self:center; }
 .family-product-links summary { cursor:pointer; min-height:36px; line-height:36px; }
-.family-product-links nav { position:absolute; z-index:10; top:100%; right:0; width:min(480px,calc(100vw - 48px)); display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; padding:16px; border:1px solid var(--il-border); border-radius:12px; background:var(--il-surface); box-shadow:0 12px 28px #0002; }
+.family-product-links nav { position:absolute; z-index:10; top:100%; left:24px; right:auto; width:min(480px,calc(100vw - 48px)); display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; padding:16px; border:1px solid var(--il-border); border-radius:12px; background:var(--il-surface); box-shadow:0 12px 28px #0002; }
 .family-product-links nav a { padding:4px 8px; }
