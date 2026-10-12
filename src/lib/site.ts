@@ -32,7 +32,7 @@ export const PRODUCTS = [
   },
   {
     domain: 'chat.integ.life',
-    name: 'Integ.Chat',
+    name: 'Integ-Chat',
     url: 'https://chat.integ.life',
     description: {
       en: 'Focused rooms, channels, threads, and agent collaboration with shared identity.',

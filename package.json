@@ -17,7 +17,7 @@
   "dependencies": {
     "@astrojs/rss": "^4.0.12",
     "@astrojs/sitemap": "^3.6.0",
-    "@integ-life/ui": "file:vendor/integ-life-ui-0.5.0.tgz",
+    "@integ-life/ui": "file:vendor/integ-life-ui-0.5.1.tgz",
     "astro": "^5.16.0"
   },
   "devDependencies": {

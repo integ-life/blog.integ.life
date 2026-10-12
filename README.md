@@ -14,6 +14,9 @@ pnpm run deploy
 
 ## Content
 
+Publishing target decided by Yangyu on 2026-10-12: **2 posts per week**.
+Inspection threshold: at least 2 posts published in the most recent 7 days.
+
 - English posts live in `src/content/posts/en/`.
 - Chinese posts live in `src/content/posts/zh/`.
 - Keep matching translations on the same `translationKey`.
