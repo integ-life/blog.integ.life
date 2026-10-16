@@ -82,6 +82,33 @@ export const PRODUCTS = [
       zh: '记录整个产品家族的产品故事、实践笔记与设计思考。',
     },
   },
+  {
+    domain: "things.integ.life",
+    name: "Things",
+    url: "https://things.integ.life/",
+    description: {
+      en: "Catalog belongings and find where they are stored.",
+      zh: "记录物品，查找它们的存放位置。"
+    }
+  },
+  {
+    domain: "family.integ.life",
+    name: "Family Daily",
+    url: "https://family.integ.life/",
+    description: {
+      en: "Share everyday moments and preserve family memories.",
+      zh: "分享日常点滴，留存家庭记忆。"
+    }
+  },
+  {
+    domain: "context.integ.life",
+    name: "Context",
+    url: "https://context.integ.life/",
+    description: {
+      en: "Keep project records and bring verified context to AI.",
+      zh: "留存项目记录，为 AI 提供可追溯的上下文。"
+    }
+  },
 ] as const;
 
 export const LANGUAGES: Record<Lang, { label: string; locale: string; pathPrefix: string }> = {
