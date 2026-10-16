@@ -3,6 +3,8 @@ title: "Let ChatGPT review the record without taking control"
 description: "The Integ.Life ChatGPT Connector exposes authorized records through a read-only MCP connection, giving AI real context while keeping decisions and changes with the user."
 pubDate: "2026-08-06"
 tags: ["AI", "MCP", "review", "privacy"]
+coverImage: "/images/covers/chatgpt-review-without-control.webp"
+coverAlt: "A person writing in a journal beside a lens for reviewing connected records"
 heroImage: "/images/posts/day-in-integ-life/chatgpt-connector.png"
 heroAlt: "The Integ.Life ChatGPT Connector page showing its MCP endpoint and read scopes"
 visualMode: "hero"

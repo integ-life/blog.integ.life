@@ -3,6 +3,8 @@ title: "A focus timer should remember the work"
 description: "Pomodoro sessions are more useful when they are attached to todos and become part of a real progress history."
 pubDate: "2026-06-06"
 tags: ["focus", "pomodoro", "todos"]
+coverImage: "/images/covers/focus-pomodoro-progress.webp"
+coverAlt: "A focus timer and task cards connected to tokens of completed work"
 heroImage: "/images/social/02-focus-pomodoro.png"
 heroAlt: "integ.life explainer card showing a running pomodoro and a linked todo"
 translationKey: "focus-pomodoro-progress"

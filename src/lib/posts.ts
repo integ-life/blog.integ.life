@@ -8,6 +8,8 @@ export type PostFrontmatter = {
   pubDate: string | Date;
   updatedDate?: string | Date;
   tags: string[];
+  coverImage?: string;
+  coverAlt?: string;
   heroImage: string;
   heroAlt: string;
   visualMode?: 'explainer' | 'hero';
@@ -112,5 +114,17 @@ export function getPostsByTag(lang: Lang, tagSlug: string): { tag: string; slug:
     tag: group.tag,
     slug: group.slug,
     posts: getPosts(lang).filter((post) => post.tags.some((tag) => tagToSlug(tag) === tagSlug)),
+  };
+}
+
+/** Shared by the visible cover and article social/structured metadata. */
+export function getPostCover(post: Pick<BlogPost, 'coverImage' | 'coverAlt' | 'lang'>) {
+  return {
+    src: post.coverImage || '/images/covers/default.webp',
+    alt: post.coverImage && post.coverAlt
+      ? post.coverAlt
+      : post.lang === 'zh'
+        ? '暖纸风插画：打开的笔记本、铅笔与文件夹'
+        : 'Warm paper illustration of an open notebook, pencil, and folder',
   };
 }

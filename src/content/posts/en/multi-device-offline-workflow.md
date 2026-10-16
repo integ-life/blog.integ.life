@@ -3,6 +3,8 @@ title: "Your productivity system has to follow the device you are using"
 description: "Web, Mac, Android, and Wear OS each support a different capture moment, so the system needs offline-first continuity across them."
 pubDate: "2026-06-05"
 tags: ["sync", "offline", "devices"]
+coverImage: "/images/covers/multi-device-offline-workflow.webp"
+coverAlt: "A ribbon connecting a laptop, phone, and watch across a quiet landscape"
 heroImage: "/images/social/03-multidevice-offline.png"
 heroAlt: "integ.life explainer card showing web, Android, and Wear OS sync"
 translationKey: "multi-device-offline-workflow"

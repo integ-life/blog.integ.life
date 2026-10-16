@@ -3,6 +3,8 @@ title: "把想法变成可执行系统"
 description: "当笔记、评论、AI 建议和待办保持连接时，效率系统才真正开始发挥作用。"
 pubDate: "2026-06-07"
 tags: ["笔记", "AI", "执行"]
+coverImage: "/images/covers/notes-ai-system.webp"
+coverAlt: "零散想法连接到笔记页面与可执行任务卡片"
 heroImage: "/images/social/01-notes-ai-system.png"
 heroAlt: "integ.life 说明图：笔记、AI 评论与生成待办"
 translationKey: "notes-ai-system"

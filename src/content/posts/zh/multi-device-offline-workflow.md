@@ -3,6 +3,8 @@ title: "效率系统要跟上你正在使用的设备"
 description: "网页、Mac、Android 和 Wear OS 承担不同的记录时刻，所以系统需要跨设备的离线优先连续性。"
 pubDate: "2026-06-05"
 tags: ["同步", "离线", "多设备"]
+coverImage: "/images/covers/multi-device-offline-workflow.webp"
+coverAlt: "丝带在宁静风景中连接笔记本电脑、手机与手表"
 heroImage: "/images/social/03-multidevice-offline.png"
 heroAlt: "integ.life 说明图：Web、Android 和 Wear OS 同步"
 translationKey: "multi-device-offline-workflow"

@@ -1,7 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import { absoluteUrl, COPY, formatDate, SITE, type Lang } from '../lib/site';
-import { getTranslation, tagToSlug, type BlogPost } from '../lib/posts';
+import { getPostCover, getTranslation, tagToSlug, type BlogPost } from '../lib/posts';
 import PostVisual from '../components/PostVisual.astro';
 
 type Props = {
@@ -10,6 +10,7 @@ type Props = {
 
 const { post } = Astro.props;
 const lang: Lang = post.lang;
+const cover = getPostCover(post);
 const copy = COPY[lang];
 const translation = getTranslation(post);
 const Content = post.Content;
@@ -22,7 +23,7 @@ const jsonLd = {
   '@type': 'BlogPosting',
   headline: post.title,
   description: post.description,
-  image: absoluteUrl(post.heroImage),
+  image: absoluteUrl(cover.src),
   datePublished: post.pubDateValue.toISOString(),
   dateModified: (post.updatedDateValue ?? post.pubDateValue).toISOString(),
   author: {
@@ -41,7 +42,7 @@ const jsonLd = {
   title={post.title}
   description={post.description}
   lang={lang}
-  image={post.heroImage}
+  image={cover.src}
   type="article"
   alternates={alternates}
 >

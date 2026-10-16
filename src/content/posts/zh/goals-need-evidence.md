@@ -3,6 +3,8 @@ title: "目标不是口号，要有证据"
 description: "长期目标只有连接里程碑、待办、专注记录和 AI 复盘，才会形成可见的执行轨迹。"
 pubDate: "2026-06-04"
 tags: ["目标", "复盘", "AI"]
+coverImage: "/images/covers/goals-need-evidence.webp"
+coverAlt: "笔记与完成工作的证据支撑起通向目标的阶梯"
 heroImage: "/images/social/04-goals-ai-review.png"
 heroAlt: "integ.life 说明图：目标、里程碑和 AI 完成度评估"
 translationKey: "goals-need-evidence"

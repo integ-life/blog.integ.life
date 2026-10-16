@@ -3,6 +3,8 @@ title: "A day inside my personal operating system"
 description: "From morning intake, to ideas, todos, focus sessions, accounting, and ChatGPT review, a personal operating system is useful when the records of the day stay connected."
 pubDate: "2026-06-12"
 tags: ["workflow", "personal system", "review", "MCP"]
+coverImage: "/images/covers/day-in-integ-life.webp"
+coverAlt: "A thread connecting notes, tasks, focus, and review through a workday"
 heroImage: "/images/posts/day-in-integ-life/home-intake.png"
 heroAlt: "Real integ.life product screenshot showing ideas, todos, and recent notes on the home page"
 visualMode: "hero"

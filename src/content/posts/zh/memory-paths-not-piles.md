@@ -3,6 +3,8 @@ title: "记忆库需要路径，而不是堆积"
 description: "Integ.Life 记忆库现在把 Inbox、Markdown 文件路径和可折叠文件夹放在一起，让记录保持顺手，也让重要内容逐渐获得结构。"
 pubDate: "2026-08-09"
 tags: ["笔记", "记忆库", "工作流", "整理"]
+coverImage: "/images/covers/memory-paths-not-piles.webp"
+coverAlt: "零散笔记从收件箱延伸为文件夹与笔记本中的清晰路径"
 heroImage: "/images/social/01-notes-ai-system.png"
 heroAlt: "把相互连接的笔记逐步变成可执行系统的说明图"
 visualMode: "explainer"

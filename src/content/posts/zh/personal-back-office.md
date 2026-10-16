@@ -3,6 +3,8 @@ title: "给独立工作的个人后台"
 description: "自由职业者和自我驱动的工作者，需要轻量地连接时间、金钱、跟进事项、想法和执行历史。"
 pubDate: "2026-06-03"
 tags: ["个人后台", "时间", "记账"]
+coverImage: "/images/covers/personal-back-office.webp"
+coverAlt: "账本、硬币、计时器与联系人卡片组成相连的工作桌面"
 heroImage: "/images/social/05-personal-backoffice.png"
 heroAlt: "integ.life 说明图：记账、时间追踪和人际跟进"
 translationKey: "personal-back-office"

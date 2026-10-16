@@ -3,6 +3,8 @@ title: "Memory should have paths, not piles"
 description: "Integ.Life Memory now combines an Inbox with Markdown file paths and collapsible folders, so notes can gain structure without slowing down capture."
 pubDate: "2026-08-09"
 tags: ["notes", "memory", "workflow", "organization"]
+coverImage: "/images/covers/memory-paths-not-piles.webp"
+coverAlt: "Loose notes finding paths from an inbox into folders and a notebook"
 heroImage: "/images/social/01-notes-ai-system.png"
 heroAlt: "An explainer visual about turning connected notes into an executable system"
 visualMode: "explainer"

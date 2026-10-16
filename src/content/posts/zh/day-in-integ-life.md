@@ -3,6 +3,8 @@ title: "我一天怎么用 integ.life 管理工作"
 description: "从早上的收入口，到想法处理、待办、专注、记账和 ChatGPT review，个人操作系统的价值在于让一天里的记录不断线。"
 pubDate: "2026-06-12"
 tags: ["工作流", "个人系统", "复盘", "MCP"]
+coverImage: "/images/covers/day-in-integ-life.webp"
+coverAlt: "细线串联一天中的笔记、任务、专注与回顾"
 heroImage: "/images/posts/day-in-integ-life/home-intake.png"
 heroAlt: "integ.life 真实界面截图：主页同时显示想法、待办和最近笔记"
 visualMode: "hero"

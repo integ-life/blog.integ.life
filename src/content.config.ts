@@ -8,6 +8,8 @@ const posts = defineCollection({
     pubDate: z.union([z.string(), z.date()]),
     updatedDate: z.union([z.string(), z.date()]).optional(),
     tags: z.array(z.string()),
+    coverImage: z.string().optional(),
+    coverAlt: z.string().optional(),
     heroImage: z.string(),
     heroAlt: z.string(),
     visualMode: z.enum(['explainer', 'hero']).optional(),

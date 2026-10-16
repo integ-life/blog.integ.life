@@ -1,4 +1,5 @@
 ---
+import PostVisual from '../../components/PostVisual.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { COPY, formatDate } from '../../lib/site';
 import { getPosts } from '../../lib/posts';
@@ -21,10 +22,15 @@ const posts = getPosts(lang);
     </header>
     <div class="archive-list">
       {posts.map((post) => (
-        <article class="archive-row">
-          <time datetime={post.pubDateValue.toISOString()}>{formatDate(post.pubDateValue, lang)}</time>
-          <a href={post.url}>{post.title}</a>
-          <span>{post.description}</span>
+        <article class="article-row">
+          <a class="article-row__visual" href={post.url} aria-label={post.title}>
+            <PostVisual post={post} lang={lang} compact decorative />
+          </a>
+          <div class="article-row__body">
+            <time datetime={post.pubDateValue.toISOString()}>{formatDate(post.pubDateValue, lang)}</time>
+            <h2><a href={post.url}>{post.title}</a></h2>
+            <p>{post.description}</p>
+          </div>
         </article>
       ))}
     </div>

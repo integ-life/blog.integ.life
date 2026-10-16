@@ -3,6 +3,8 @@ title: "番茄钟不只是倒计时"
 description: "当每次专注都绑定待办并进入进度记录时，番茄钟才真正变成工作系统的一部分。"
 pubDate: "2026-06-06"
 tags: ["专注", "番茄钟", "待办"]
+coverImage: "/images/covers/focus-pomodoro-progress.webp"
+coverAlt: "专注计时器与任务卡片连接到完成工作的标记"
 heroImage: "/images/social/02-focus-pomodoro.png"
 heroAlt: "integ.life 说明图：进行中的番茄钟和绑定待办"
 translationKey: "focus-pomodoro-progress"

@@ -3,6 +3,8 @@ title: "Todo 工作台应该回答：现在做什么？"
 description: "现在的 Integ.Life Todo 工作台把 Today、Tomorrow、This week、Overdue 和 MIT 分开，让大型任务系统仍然能给出清晰的下一步。"
 pubDate: "2026-08-08"
 tags: ["待办", "专注", "计划", "MIT"]
+coverImage: "/images/covers/todo-workspace-what-now.webp"
+coverAlt: "分组任务托盘前，一张卡片被选为下一步"
 heroImage: "/images/social/02-focus-pomodoro.png"
 heroAlt: "把专注时间连接到具体 Todo 的说明图"
 visualMode: "explainer"

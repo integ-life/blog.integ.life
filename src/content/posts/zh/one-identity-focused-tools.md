@@ -3,6 +3,8 @@ title: "一个身份，多个聚焦工具"
 description: "Integ.Life 现在让关联产品共享中心登录，同时让每个产品保留清晰用途、独立域名和自己的界面。"
 pubDate: "2026-08-07"
 tags: ["统一身份", "产品设计", "工作流", "integ.life"]
+coverImage: "/images/covers/one-identity-focused-tools.webp"
+coverAlt: "一把钥匙以细线连接各自专注的工具"
 heroImage: "/images/social/03-multidevice-offline.png"
 heroAlt: "Integ.Life 工作流在多个使用场景之间保持连续的说明图"
 visualMode: "explainer"

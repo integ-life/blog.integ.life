@@ -3,6 +3,8 @@ title: "A todo workspace should answer: what now?"
 description: "The current Integ.Life Todo workspace separates Today, Tomorrow, This week, Overdue, and MIT so a large task system can still produce a clear next move."
 pubDate: "2026-08-08"
 tags: ["todos", "focus", "planning", "MIT"]
+coverImage: "/images/covers/todo-workspace-what-now.webp"
+coverAlt: "Sorted task trays with one card selected as the next move"
 heroImage: "/images/social/02-focus-pomodoro.png"
 heroAlt: "An explainer visual showing focus time connected to a real todo"
 visualMode: "explainer"

@@ -3,6 +3,8 @@ title: "A personal back office for independent work"
 description: "Freelancers and self-directed workers need a lightweight way to connect time, money, follow-ups, ideas, and execution history."
 pubDate: "2026-06-03"
 tags: ["back office", "time", "accounting"]
+coverImage: "/images/covers/personal-back-office.webp"
+coverAlt: "A connected desk with a ledger, coins, timer, and contact cards"
 heroImage: "/images/social/05-personal-backoffice.png"
 heroAlt: "integ.life explainer card showing accounting, time tracking, and people follow-ups"
 translationKey: "personal-back-office"

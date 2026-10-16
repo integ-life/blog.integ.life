@@ -3,6 +3,8 @@ title: "One identity, many focused tools"
 description: "Integ.Life now uses a central sign-in across its connected product family, while each product keeps a focused interface and an independent domain."
 pubDate: "2026-08-07"
 tags: ["identity", "product design", "workflow", "integ.life"]
+coverImage: "/images/covers/one-identity-focused-tools.webp"
+coverAlt: "A single key connecting focused tools with a shared thread"
 heroImage: "/images/social/03-multidevice-offline.png"
 heroAlt: "An explainer visual showing an Integ.Life workflow continuing across surfaces"
 visualMode: "explainer"

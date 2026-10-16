@@ -3,6 +3,8 @@ title: "让 ChatGPT 看记录，但不接管系统"
 description: "Integ.Life ChatGPT Connector 通过只读 MCP 连接提供授权记录，让 AI 获得真实上下文，同时把决定和修改权留给用户。"
 pubDate: "2026-08-06"
 tags: ["AI", "MCP", "复盘", "隐私"]
+coverImage: "/images/covers/chatgpt-review-without-control.webp"
+coverAlt: "手写笔记的人与用于审阅关联记录的透镜"
 heroImage: "/images/posts/day-in-integ-life/chatgpt-connector.png"
 heroAlt: "Integ.Life ChatGPT Connector 页面展示 MCP 地址和只读范围"
 visualMode: "hero"

@@ -3,6 +3,8 @@ title: "Turn scattered ideas into an executable system"
 description: "A productivity system becomes useful when notes, comments, AI review, and todos stay connected instead of living in separate tools."
 pubDate: "2026-06-07"
 tags: ["notes", "AI", "execution"]
+coverImage: "/images/covers/notes-ai-system.webp"
+coverAlt: "Scattered ideas connected to notebook pages and actionable task cards"
 heroImage: "/images/social/01-notes-ai-system.png"
 heroAlt: "integ.life explainer card showing notes, AI comments, and generated todos"
 translationKey: "notes-ai-system"

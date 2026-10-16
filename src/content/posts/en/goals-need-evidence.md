@@ -3,6 +3,8 @@ title: "Goals need evidence, not slogans"
 description: "Long-running goals become manageable when milestones, todos, focus sessions, and AI review form a visible execution trail."
 pubDate: "2026-06-04"
 tags: ["goals", "review", "AI"]
+coverImage: "/images/covers/goals-need-evidence.webp"
+coverAlt: "An ascending path supported by notes and evidence of completed work"
 heroImage: "/images/social/04-goals-ai-review.png"
 heroAlt: "integ.life explainer card showing goals, milestones, and AI completion review"
 translationKey: "goals-need-evidence"

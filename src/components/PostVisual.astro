@@ -1,7 +1,6 @@
 ---
 import type { Lang } from '../lib/site';
-import type { BlogPost } from '../lib/posts';
-import ExplainerVisual from './ExplainerVisual.astro';
+import { getPostCover, type BlogPost } from '../lib/posts';
 
 type Props = {
   post: BlogPost;
@@ -11,18 +10,17 @@ type Props = {
   className?: string;
 };
 
-const { post, lang, compact = false, decorative = false, className = '' } = Astro.props;
+const { post, compact = false, decorative = false, className = '' } = Astro.props;
+const cover = getPostCover(post);
 const imageClass = ['post-visual-image', compact ? 'compact' : '', className].filter(Boolean).join(' ');
 ---
 
-{post.visualMode === 'hero' ? (
-  <img
-    class={imageClass}
-    src={post.heroImage}
-    alt={decorative ? '' : post.heroAlt}
-    loading={compact ? 'lazy' : 'eager'}
-    decoding="async"
-  />
-) : (
-  <ExplainerVisual visual={post.visualKey} lang={lang} compact={compact} decorative={decorative} />
-)}
+<img
+  class={imageClass}
+  src={cover.src}
+  alt={decorative ? '' : cover.alt}
+  width="1280"
+  height="800"
+  loading={compact ? 'lazy' : 'eager'}
+  decoding="async"
+/>
