@@ -129,16 +129,13 @@ export const COPY: Record<Lang, {
   navArchive: string;
   navTags: string;
   navProducts: string;
-  navMainSite: string;
   latest: string;
-  featured: string;
   allArticles: string;
   archiveTitle: string;
   tagsTitle: string;
   readMore: string;
   byline: string;
   switchLanguage: string;
-  themeToggle: string;
   homeEyebrow: string;
   homeTitle: string;
   homeIntro: string;
@@ -156,16 +153,13 @@ export const COPY: Record<Lang, {
     navArchive: 'Archive',
     navTags: 'Tags',
     navProducts: 'Products',
-    navMainSite: 'Main site',
     latest: 'Latest',
-    featured: 'Featured',
     allArticles: 'All articles',
     archiveTitle: 'Archive',
     tagsTitle: 'Tags',
     readMore: 'Read article',
     byline: 'Written by Albert',
     switchLanguage: '中文',
-    themeToggle: 'Toggle theme',
     homeEyebrow: 'Notes from the Integ.Life family',
     homeTitle: 'Stories from many focused apps.',
     homeIntro: 'Product stories, practical notes, and experiments from across Integ.Life—not only the personal operating system at app.integ.life.',
@@ -183,16 +177,13 @@ export const COPY: Record<Lang, {
     navArchive: '归档',
     navTags: '标签',
     navProducts: '产品',
-    navMainSite: '主站',
     latest: '最新',
-    featured: '精选',
     allArticles: '全部文章',
     archiveTitle: '归档',
     tagsTitle: '标签',
     readMore: '阅读文章',
     byline: 'Albert 撰写',
     switchLanguage: 'English',
-    themeToggle: '切换主题',
     homeEyebrow: '来自 Integ.Life 产品家族的笔记',
     homeTitle: '多个聚焦 App 的产品故事。',
     homeIntro: '这里记录整个 Integ.Life 产品家族的故事、实践与实验，不再只聚焦 app.integ.life 的个人操作系统。',
