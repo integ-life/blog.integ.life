@@ -30,3 +30,5 @@ Inspection threshold: at least 2 posts published in the most recent 7 days.
 2. `pnpm run build`
 3. copy `CNAME` into `dist/`
 4. push `dist/` to the `gh-pages` branch of `git@github.com:integ-life/blog.integ.life.git`
+
+The pre-deploy check refuses to continue unless you are on a clean `main` whose HEAD equals `origin/main`. Set `ALLOW_UNSAFE_DEPLOY=1` to downgrade those checks to warnings.
