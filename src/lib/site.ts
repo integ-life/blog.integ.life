@@ -129,6 +129,10 @@ export const COPY: Record<Lang, {
   navArchive: string;
   navTags: string;
   navProducts: string;
+  skipToContent: string;
+  tagsLabel: string;
+  allApps: string;
+  productsNavLabel: string;
   latest: string;
   allArticles: string;
   archiveTitle: string;
@@ -153,6 +157,10 @@ export const COPY: Record<Lang, {
     navArchive: 'Archive',
     navTags: 'Tags',
     navProducts: 'Products',
+    skipToContent: 'Skip to content',
+    tagsLabel: 'Tags',
+    allApps: 'All apps',
+    productsNavLabel: 'Integ.Life products',
     latest: 'Latest',
     allArticles: 'All articles',
     archiveTitle: 'Archive',
@@ -177,6 +185,10 @@ export const COPY: Record<Lang, {
     navArchive: '归档',
     navTags: '标签',
     navProducts: '产品',
+    skipToContent: '跳到正文',
+    tagsLabel: '标签',
+    allApps: '全部产品',
+    productsNavLabel: 'Integ.Life 产品',
     latest: '最新',
     allArticles: '全部文章',
     archiveTitle: '归档',
@@ -213,5 +225,6 @@ export function formatDate(date: Date, lang: Lang): string {
     year: 'numeric',
     month: 'short',
     day: 'numeric',
+    timeZone: 'UTC',
   }).format(date);
 }

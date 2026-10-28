@@ -22,13 +22,16 @@ export function getStaticPaths() {
 const lang = 'en';
 const copy = COPY[lang];
 const { group } = Astro.props as Props;
+const hasZh = getTagGroups('zh').some((g) => g.slug === group.slug);
 ---
 
 <BaseLayout
   title={group.tag}
-  description={`English productivity articles tagged ${group.tag}.`}
+  description={`Field Notes articles tagged ${group.tag}.`}
   lang={lang}
-  alternates={[{ lang: 'en', path: `/tags/${group.slug}/` }, { lang: 'zh', path: '/zh/tags/' }]}
+  alternates={hasZh
+    ? [{ lang: 'en', path: `/tags/${group.slug}/` }, { lang: 'zh', path: `/zh/tags/${group.slug}/` }]
+    : [{ lang: 'en', path: `/tags/${group.slug}/` }]}
 >
   <section class="listing-shell">
     <header class="listing-header">

@@ -13,7 +13,6 @@ export const GET: APIRoute = (context) => rss({
     pubDate: post.pubDateValue,
     link: post.url,
     categories: post.tags,
-    author: SITE.author,
   })),
   customData: '<language>en</language>',
 });

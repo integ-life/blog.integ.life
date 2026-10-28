@@ -5,7 +5,7 @@ import { getPosts } from '../../lib/posts';
 
 export const GET: APIRoute = (context) => rss({
   title: `${SITE.name} 中文`,
-  description: '关于效率、个人系统、专注工作和 AI 辅助执行的中文笔记。',
+  description: '来自整个 Integ.Life 聚焦 App 产品家族的双语产品故事、实践笔记与实验。',
   site: new URL('/zh/', context.site ?? SITE.url),
   items: getPosts('zh').map((post) => ({
     title: post.title,
@@ -13,7 +13,6 @@ export const GET: APIRoute = (context) => rss({
     pubDate: post.pubDateValue,
     link: post.url,
     categories: post.tags,
-    author: SITE.author,
   })),
   customData: '<language>zh-CN</language>',
 });

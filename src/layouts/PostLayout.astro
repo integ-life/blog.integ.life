@@ -1,6 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-import { absoluteUrl, COPY, formatDate, SITE, type Lang } from '../lib/site';
+import { absoluteUrl, COPY, formatDate, localizedPath, SITE, type Lang } from '../lib/site';
 import { getPostCover, getTranslation, tagToSlug, type BlogPost } from '../lib/posts';
 import PostVisual from '../components/PostVisual.astro';
 
@@ -54,9 +54,9 @@ const jsonLd = {
       </div>
       <h1>{post.title}</h1>
       <p>{post.description}</p>
-      <div class="article-header__tags" aria-label="Tags">
+      <div class="article-header__tags" aria-label={copy.tagsLabel}>
         {post.tags.map((tag) => (
-          <a href={lang === 'en' ? `/tags/${tagToSlug(tag)}/` : `/zh/tags/${tagToSlug(tag)}/`}>{tag}</a>
+          <a href={localizedPath(lang, `/tags/${tagToSlug(tag)}/`)}>{tag}</a>
         ))}
       </div>
       {translation && <a class="translation-link" href={translation.url}>{copy.switchLanguage}</a>}

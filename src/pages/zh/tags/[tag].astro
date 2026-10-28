@@ -22,13 +22,16 @@ export function getStaticPaths() {
 const lang = 'zh';
 const copy = COPY[lang];
 const { group } = Astro.props as Props;
+const hasEn = getTagGroups('en').some((g) => g.slug === group.slug);
 ---
 
 <BaseLayout
   title={group.tag}
-  description={`标签为 ${group.tag} 的中文效率文章。`}
+  description={`标签为 ${group.tag} 的 Field Notes 中文文章。`}
   lang={lang}
-  alternates={[{ lang: 'en', path: '/tags/' }, { lang: 'zh', path: `/zh/tags/${group.slug}/` }]}
+  alternates={hasEn
+    ? [{ lang: 'en', path: `/tags/${group.slug}/` }, { lang: 'zh', path: `/zh/tags/${group.slug}/` }]
+    : [{ lang: 'zh', path: `/zh/tags/${group.slug}/` }]}
 >
   <section class="listing-shell">
     <header class="listing-header">

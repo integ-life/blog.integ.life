@@ -1,5 +1,5 @@
 ---
-import { absoluteUrl, COPY, DEFAULT_LANG, LANGUAGES, PRODUCTS, SITE, type Lang } from '../lib/site';
+import { absoluteUrl, COPY, DEFAULT_LANG, LANGUAGES, localizedPath, PRODUCTS, SITE, type Lang } from '../lib/site';
 import '../styles/global.css';
 import '@integ-life/ui/styles.css';
 import '../styles/shared-layout.css';
@@ -14,6 +14,7 @@ type Props = {
   description?: string;
   lang?: Lang;
   image?: string;
+  noindex?: boolean;
   type?: 'website' | 'article';
   alternates?: AlternateLink[];
 };
@@ -23,6 +24,7 @@ const {
   description = SITE.defaultDescription,
   lang = DEFAULT_LANG,
   image = SITE.defaultOgImage,
+  noindex = false,
   type = 'website',
   alternates = [
     { lang: 'en', path: '/' },
@@ -35,7 +37,7 @@ const pageTitle = title === SITE.defaultTitle ? title : `${title} | ${SITE.name}
 const canonical = absoluteUrl(Astro.url.pathname);
 const ogImage = absoluteUrl(image);
 const switchAlt = alternates.find((alternate) => alternate.lang !== lang);
-const rssPath = lang === 'en' ? '/rss.xml' : '/zh/rss.xml';
+const rssPath = localizedPath(lang, '/rss.xml');
 ---
 
 <!doctype html>
@@ -58,6 +60,7 @@ const rssPath = lang === 'en' ? '/rss.xml' : '/zh/rss.xml';
     <meta name="description" content={description} />
     <meta name="author" content={SITE.author} />
     <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex" />}
     <link rel="alternate" type="application/rss+xml" title={`${SITE.name} ${copy.rss}`} href={absoluteUrl(rssPath)} />
     {alternates.map((alternate) => (
       <link rel="alternate" hreflang={LANGUAGES[alternate.lang].locale} href={absoluteUrl(alternate.path)} />
@@ -86,18 +89,18 @@ const rssPath = lang === 'en' ? '/rss.xml' : '/zh/rss.xml';
     </script>
   </head>
   <body>
-    <a class="skip-link" href="#content">Skip to content</a>
-    <integ-family-bar product="blog" name="Field Notes" locale={lang} home-href={lang === 'en' ? '/' : '/zh/'}>
+    <a class="skip-link" href="#content">{copy.skipToContent}</a>
+    <integ-family-bar product="blog" name="Field Notes" locale={lang} home-href={localizedPath(lang, '/')}>
       <div data-il-actions>{switchAlt && <a data-il-compact="language" class="il-control" href={switchAlt.path} title={copy.switchLanguage}>{copy.switchLanguage}</a>}</div>
     </integ-family-bar>
     <nav class="site-nav shared-editorial-nav" aria-label="Primary navigation">
-      <a href={lang === 'en' ? '/#products' : '/zh/#products'}>{copy.navProducts}</a>
-      <a href={lang === 'en' ? '/' : '/zh/'}>{copy.navArticles}</a>
-      <a href={lang === 'en' ? '/archive/' : '/zh/archive/'}>{copy.navArchive}</a>
-      <a href={lang === 'en' ? '/tags/' : '/zh/tags/'}>{copy.navTags}</a>
+      <a href={localizedPath(lang, '/#products')}>{copy.navProducts}</a>
+      <a href={localizedPath(lang, '/')}>{copy.navArticles}</a>
+      <a href={localizedPath(lang, '/archive/')}>{copy.navArchive}</a>
+      <a href={localizedPath(lang, '/tags/')}>{copy.navTags}</a>
       <details class="family-product-links">
-        <summary>{lang === 'en' ? 'All apps' : '全部产品'}</summary>
-        <nav aria-label={lang === 'en' ? 'Integ.Life products' : 'Integ.Life 产品'}>
+        <summary>{copy.allApps}</summary>
+        <nav aria-label={copy.productsNavLabel}>
           {PRODUCTS.map(product => <a href={product.url}>{product.name}</a>)}
         </nav>
       </details>

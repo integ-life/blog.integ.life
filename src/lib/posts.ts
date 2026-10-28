@@ -1,5 +1,5 @@
 import type { MarkdownInstance } from 'astro';
-import type { Lang } from './site';
+import { localizedPath, type Lang } from './site';
 
 export type PostFrontmatter = {
   title: string;
@@ -54,7 +54,7 @@ for (const [path, module] of Object.entries(modules)) {
     ...frontmatter,
     lang: parts.lang,
     slug: parts.slug,
-    url: parts.lang === 'en' ? `/posts/${parts.slug}/` : `/zh/posts/${parts.slug}/`,
+    url: localizedPath(parts.lang, `/posts/${parts.slug}/`),
     pubDateValue: toDate(frontmatter.pubDate),
     ...(frontmatter.updatedDate ? { updatedDateValue: toDate(frontmatter.updatedDate) } : {}),
     Content: module.Content,
