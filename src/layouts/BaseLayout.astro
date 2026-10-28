@@ -39,18 +39,20 @@ const rssPath = lang === 'en' ? '/rss.xml' : '/zh/rss.xml';
 ---
 
 <!doctype html>
-<html lang={LANGUAGES[lang].locale} data-theme="light">
+<html lang={LANGUAGES[lang].locale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script is:inline>
-      (() => {
-        const key = 'integ-ui.appearance';
-        const stored = localStorage.getItem(key) || localStorage.getItem('blog-theme');
-        if (stored && !localStorage.getItem(key)) localStorage.setItem(key, stored);
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        document.documentElement.dataset.integTheme = stored && stored !== 'system' ? stored : (prefersDark ? 'dark' : 'light');
-      })();
+      try {
+        (() => {
+          const key = 'integ-ui.appearance';
+          const stored = localStorage.getItem(key) || localStorage.getItem('blog-theme');
+          if (stored && !localStorage.getItem(key)) localStorage.setItem(key, stored);
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          document.documentElement.dataset.integTheme = stored && stored !== 'system' ? stored : (prefersDark ? 'dark' : 'light');
+        })();
+      } catch {}
     </script>
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
