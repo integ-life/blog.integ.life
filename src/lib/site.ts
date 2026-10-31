@@ -63,7 +63,7 @@ export const PRODUCTS = [
   },
   {
     domain: 'games.integ.life', name: 'Integ Games', url: 'https://games.integ.life',
-    description: { en: 'Twenty-two original browser games with touch controls and local saves.', zh: '二十二个原创浏览器游戏，支持触控与本机存档。' },
+    description: { en: 'Twenty-three original browser games with touch controls and local saves.', zh: '二十三个原创浏览器游戏，支持触控与本机存档。' },
   },
   {
     domain: 'tools.integ.life', name: 'Integ Tools', url: 'https://tools.integ.life',
